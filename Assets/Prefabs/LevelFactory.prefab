@@ -43,3 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472885469d5d04e0d8133928bb1cfb46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalTile: {fileID: 2294789950864933642, guid: e873de0935f00d04a95c544b718b079f,
+    type: 3}
+  slidingTile: {fileID: 2092175612645202462, guid: 5797e7bac3bc15c46bfb5ebd8b490fad,
+    type: 3}
+  jumpTile: {fileID: 6322157222520894107, guid: ef895395b6166254187a7b2d1ec4178d,
+    type: 3}
