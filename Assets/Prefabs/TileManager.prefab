@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8047079658256273110
+--- !u!1 &7484990419488847304
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6383987406794324138}
-  - component: {fileID: 607122368371660022}
+  - component: {fileID: 7484990419488847310}
+  - component: {fileID: 7484990419488847311}
   m_Layer: 0
-  m_Name: LevelFactory
+  m_Name: TileManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6383987406794324138
+--- !u!4 &7484990419488847310
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8047079658256273110}
+  m_GameObject: {fileID: 7484990419488847304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,23 +31,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &607122368371660022
+--- !u!114 &7484990419488847311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8047079658256273110}
+  m_GameObject: {fileID: 7484990419488847304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472885469d5d04e0d8133928bb1cfb46, type: 3}
+  m_Script: {fileID: 11500000, guid: 5438119c9ccf1524bb7dff9e29a6f405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalTile: {fileID: 2294789950864933642, guid: e873de0935f00d04a95c544b718b079f,
-    type: 3}
-  slidingTile: {fileID: 2092175612645202462, guid: 5797e7bac3bc15c46bfb5ebd8b490fad,
-    type: 3}
-  jumpTile: {fileID: 6322157222520894107, guid: ef895395b6166254187a7b2d1ec4178d,
-    type: 3}
-  tileManager: {fileID: 7484990419488847311, guid: b4e5507b9a1123e4baaee85c712dc8ba,
-    type: 3}

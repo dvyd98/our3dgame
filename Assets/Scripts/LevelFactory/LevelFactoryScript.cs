@@ -9,6 +9,8 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject slidingTile;
     public GameObject jumpTile;
 
+    public TileManagerScript tileManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,21 +46,23 @@ public class LevelFactoryScript : MonoBehaviour
             string rowTiles = reader.ReadLine();
             for (int i = 0; i < x; ++i)
             {
+                GameObject obj = null;
                 if (rowTiles[i] == '.')
                 {
-                    GameObject obj = (GameObject)Instantiate(normalTile, new Vector3(-2 + i, 0, j), transform.rotation);
+                    obj = Instantiate(normalTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
                 }
                 else if (rowTiles[i] == 's')
                 {
-                    GameObject obj = (GameObject)Instantiate(slidingTile, new Vector3(-2 + i, 0, j), transform.rotation);
+                    obj = Instantiate(slidingTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
                 }
                 else if (rowTiles[i] == 'j')
                 {
-                    GameObject obj = (GameObject)Instantiate(jumpTile, new Vector3(-2 + i, 0, j), transform.rotation);
+                    obj = Instantiate(jumpTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
                 }
+                tileManager.AddTile(ref obj);
             }
         }
     }
