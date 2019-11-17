@@ -8,6 +8,7 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject normalTile;
     public GameObject slidingTile;
     public GameObject jumpTile;
+    public GameObject blockObstacle;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +29,6 @@ public class LevelFactoryScript : MonoBehaviour
         string title = inp_stm.ReadLine();
         if (title == "LEVEL1") loadLevel1(inp_stm);
 
-        //!inp_stm.EndOfStream)
-
         inp_stm.Close();
     }
 
@@ -41,25 +40,44 @@ public class LevelFactoryScript : MonoBehaviour
 
         for (int j = 0; j < z; ++j)
         {
-            string rowTiles = reader.ReadLine();
+            string[] rowTiles = reader.ReadLine().Split('|');
+
+            string tiles = rowTiles[0];
+            string obstacles = (rowTiles.Length == 2) ? rowTiles[1] : "";
+
+
             for (int i = 0; i < x; ++i)
             {
-                if (rowTiles[i] == '.')
+                if (tiles[i] == '.')
                 {
                     GameObject obj = (GameObject)Instantiate(normalTile, new Vector3(-2 + i, 0, j), transform.rotation);
                     obj.transform.parent = transform;
                 }
-                else if (rowTiles[i] == 's')
+                else if (tiles[i] == 's')
                 {
                     GameObject obj = (GameObject)Instantiate(slidingTile, new Vector3(-2 + i, 0, j), transform.rotation);
                     obj.transform.parent = transform;
                 }
-                else if (rowTiles[i] == 'j')
+                else if (tiles[i] == 'j')
                 {
                     GameObject obj = (GameObject)Instantiate(jumpTile, new Vector3(-2 + i, 0, j), transform.rotation);
                     obj.transform.parent = transform;
                 }
             }
+
+            if (obstacles.Length != 0)
+            {
+                for (int i = 0; i < x; ++i)
+                {
+                    if (obstacles[i] == 'b')
+                    {
+                        GameObject obj = (GameObject)Instantiate(blockObstacle, new Vector3(-2 + i, 0.51f, j), transform.rotation);
+                        obj.transform.parent = transform;
+                    }
+                }
+            }
+
         }
+
     }
 }
