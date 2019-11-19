@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - jump
+  - normal
+  - sliding
+  - magneticb
+  - magneticf
+  - magneticr
+  - magneticl
   layers:
   - Default
   - TransparentFX

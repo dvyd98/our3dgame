@@ -8,8 +8,13 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject normalTile;
     public GameObject slidingTile;
     public GameObject jumpTile;
+    public GameObject magneticTileB;
+    public GameObject magneticTileF;
+    public GameObject magneticTileL;
+    public GameObject magneticTileR;
 
     public TileManagerScript tileManager;
+    public TileBaseScript tile;
 
     // Start is called before the first frame update
     void Start()
@@ -51,18 +56,34 @@ public class LevelFactoryScript : MonoBehaviour
                 {
                     obj = Instantiate(normalTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
+                    tile = obj.GetComponent<TileBaseScript>();
                 }
                 else if (rowTiles[i] == 's')
                 {
                     obj = Instantiate(slidingTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
+                    tile = obj.GetComponent<SlidingTileMoveScript>();
                 }
                 else if (rowTiles[i] == 'j')
                 {
                     obj = Instantiate(jumpTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
+                    tile = obj.GetComponent<CollisionActionScript>();
                 }
-                tileManager.AddTile(ref obj);
+                else if (rowTiles[i] == 'b')
+                {
+                    obj = Instantiate(magneticTileB, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj.transform.parent = transform;
+                    tile = obj.GetComponent<MagneticTileBaseScript>();
+                }
+                else if (rowTiles[i] == 'f')
+                {
+                    obj = Instantiate(magneticTileF, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj.transform.parent = transform;
+                    tile = obj.GetComponent<MagneticTileForwardScript>();
+                }
+                
+                tileManager.AddTile(ref tile);
             }
         }
     }

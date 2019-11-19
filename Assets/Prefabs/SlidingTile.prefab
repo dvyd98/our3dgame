@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6299435780664456472}
   m_Layer: 0
   m_Name: SlidingTile
-  m_TagString: Untagged
+  m_TagString: sliding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
