@@ -71,7 +71,7 @@ public class LevelFactoryScript : MonoBehaviour
                 {
                     if (obstacles[i] == 'b')
                     {
-                        GameObject obj = (GameObject)Instantiate(blockObstacle, new Vector3(-2 + i, 0.51f, j), transform.rotation);
+                        GameObject obj = (GameObject)Instantiate(blockObstacle, new Vector3(-2 + i, 0.3f, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                 }

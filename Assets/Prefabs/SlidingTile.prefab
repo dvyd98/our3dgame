@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 2092175612645202461}
   - component: {fileID: 2092175612645202460}
   - component: {fileID: 8574535334338411090}
-  - component: {fileID: -6299435780664456472}
+  - component: {fileID: 4891795778561181699}
   m_Layer: 0
   m_Name: SlidingTile
-  m_TagString: Untagged
+  m_TagString: slidingTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bf1a4affcde4d4299edaa0329d743a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &-6299435780664456472
+--- !u!64 &4891795778561181699
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
