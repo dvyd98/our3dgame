@@ -9,6 +9,7 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject slidingTile;
     public GameObject jumpTile;
     public GameObject blockObstacle;
+    public GameObject woolBall;
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +73,11 @@ public class LevelFactoryScript : MonoBehaviour
                     if (obstacles[i] == 'b')
                     {
                         GameObject obj = (GameObject)Instantiate(blockObstacle, new Vector3(-2 + i, 0.3f, j), transform.rotation);
+                        obj.transform.parent = transform;
+                    }
+                    if (obstacles[i] == 'w')
+                    {
+                        GameObject obj = (GameObject)Instantiate(woolBall, new Vector3(-2 + i, 0.5f, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                 }
