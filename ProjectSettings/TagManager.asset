@@ -11,8 +11,8 @@ TagManager:
   - sliding
   - magneticb
   - magneticf
-  - magneticr
-  - magneticl
+  - magneticgroup
+  - obstacle
   layers:
   - Default
   - TransparentFX
