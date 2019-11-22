@@ -87,7 +87,19 @@ public class LevelFactoryScript : MonoBehaviour
                     obj.transform.parent = transform;
                     tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
                 }
-                
+                else if (tiles[i] == 'l')
+                {
+                    obj = Instantiate(magneticTileL, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj.transform.parent = transform;
+                    tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
+                }
+                else if (tiles[i] == 'r')
+                {
+                    obj = Instantiate(magneticTileR, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj.transform.parent = transform;
+                    tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
+                }
+
                 tileManager.AddTile(ref tile);
             }
 

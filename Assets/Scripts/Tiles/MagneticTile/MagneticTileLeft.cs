@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagneticTileForwardScript : MagneticTileBaseScript
+public class MagneticTileLeft : MagneticTileBaseScript
 {
     // Start is called before the first frame update
     void Start()
     {
-        type = "magneticforward";
+        type = "magneticleft";
         count = 10;
         speed = 6;
     }
@@ -18,7 +18,7 @@ public class MagneticTileForwardScript : MagneticTileBaseScript
         if (isTouching && count > 0)
         {
             --count;
-            transform.parent.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.parent.Translate(Vector3.right * -speed * Time.deltaTime);
         }
         if (count == 0)
         {
@@ -34,3 +34,4 @@ public class MagneticTileForwardScript : MagneticTileBaseScript
     }
 
 }
+

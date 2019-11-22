@@ -40,4 +40,16 @@ public class BallMoveScript : MonoBehaviour
         //rb.AddForce(new Vector3(0.0f, 0.0f, 2) * speed);
         //rb.AddForce(new Vector3(moveHorizontal, 0.0f, 0.0f) * speed);
     }
+
+    void OnCollisionEnter(Collision otherObj)
+    {
+        if (otherObj.gameObject.CompareTag("magneticf"))
+            transform.parent = otherObj.transform;
+    }
+
+    void OnCollisionStay(Collision otherObj)
+    {
+        if (otherObj.gameObject.CompareTag("magneticf"))
+            transform.parent = otherObj.transform;
+    }
 }

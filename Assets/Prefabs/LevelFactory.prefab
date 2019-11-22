@@ -49,13 +49,15 @@ MonoBehaviour:
     type: 3}
   jumpTile: {fileID: 6322157222520894107, guid: ef895395b6166254187a7b2d1ec4178d,
     type: 3}
+  blockObstacle: {fileID: 0}
+  woolBall: {fileID: 0}
   magneticTileB: {fileID: 9196754687634405078, guid: d36dbd4901ccfbc4980c1670c9a10cc9,
     type: 3}
   magneticTileF: {fileID: 6762739121169110938, guid: 18303d814b335f94db1ae5e3d9214a1e,
     type: 3}
-  magneticTileL: {fileID: 4159996409235639815, guid: a45f0560f95baf8488b15ce1ccfefb6d,
+  magneticTileL: {fileID: 3179852580907671348, guid: 8ff94a70742a06f418bbe0c2c6def9c1,
     type: 3}
-  magneticTileR: {fileID: 4159996409235639815, guid: a45f0560f95baf8488b15ce1ccfefb6d,
+  magneticTileR: {fileID: 8684063339314595319, guid: a698062024c9ca2488d58c66534ad80e,
     type: 3}
   tileManager: {fileID: 7484990419488847311, guid: b4e5507b9a1123e4baaee85c712dc8ba,
     type: 3}
