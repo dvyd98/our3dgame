@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionActionScript : MonoBehaviour
+public class CollisionActionScript : TileBaseScript
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        type = "jump";
     }
 
     // Update is called once per frame

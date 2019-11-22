@@ -4,9 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - slidingTile
   - blockObstacle
   - woolBall
+  - jump
+  - normal
+  - sliding
+  - magneticb
+  - magneticf
+  - magneticr
+  - magneticl
   layers:
   - Default
   - TransparentFX

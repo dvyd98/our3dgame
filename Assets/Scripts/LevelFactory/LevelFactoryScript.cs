@@ -10,6 +10,13 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject jumpTile;
     public GameObject blockObstacle;
     public GameObject woolBall;
+    public GameObject magneticTileB;
+    public GameObject magneticTileF;
+    public GameObject magneticTileL;
+    public GameObject magneticTileR;
+
+    public TileManagerScript tileManager;
+    public TileBaseScript tile;
 
     // Start is called before the first frame update
     void Start()
@@ -49,21 +56,39 @@ public class LevelFactoryScript : MonoBehaviour
 
             for (int i = 0; i < x; ++i)
             {
-                if (tiles[i] == '.')
+                GameObject obj = null;
+                if (rowTiles[i] == '.')
                 {
-                    GameObject obj = (GameObject)Instantiate(normalTile, new Vector3(-2 + i, 0, j), transform.rotation);
+                    obj = Instantiate(normalTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
+                    tile = obj.GetComponent<TileBaseScript>();
                 }
                 else if (tiles[i] == 's')
                 {
-                    GameObject obj = (GameObject)Instantiate(slidingTile, new Vector3(-2 + i, 0, j), transform.rotation);
+                    obj = Instantiate(slidingTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
+                    tile = obj.GetComponent<SlidingTileMoveScript>();
                 }
                 else if (tiles[i] == 'j')
                 {
-                    GameObject obj = (GameObject)Instantiate(jumpTile, new Vector3(-2 + i, 0, j), transform.rotation);
+                    obj = Instantiate(jumpTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
+                    tile = obj.GetComponent<CollisionActionScript>();
                 }
+                else if (rowTiles[i] == 'b')
+                {
+                    obj = Instantiate(magneticTileB, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj.transform.parent = transform;
+                    tile = obj.GetComponent<MagneticTileBaseScript>();
+                }
+                else if (rowTiles[i] == 'f')
+                {
+                    obj = Instantiate(magneticTileF, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj.transform.parent = transform;
+                    tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
+                }
+                
+                tileManager.AddTile(ref tile);
             }
 
             if (obstacles.Length != 0)
