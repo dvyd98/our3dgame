@@ -57,7 +57,7 @@ public class LevelFactoryScript : MonoBehaviour
             for (int i = 0; i < x; ++i)
             {
                 GameObject obj = null;
-                if (rowTiles[i] == '.')
+                if (tiles[i] == '.')
                 {
                     obj = Instantiate(normalTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
@@ -75,13 +75,13 @@ public class LevelFactoryScript : MonoBehaviour
                     obj.transform.parent = transform;
                     tile = obj.GetComponent<CollisionActionScript>();
                 }
-                else if (rowTiles[i] == 'b')
+                else if (tiles[i] == 'b')
                 {
                     obj = Instantiate(magneticTileB, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
                     tile = obj.GetComponent<MagneticTileBaseScript>();
                 }
-                else if (rowTiles[i] == 'f')
+                else if (tiles[i] == 'f')
                 {
                     obj = Instantiate(magneticTileF, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
