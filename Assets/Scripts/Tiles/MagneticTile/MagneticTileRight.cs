@@ -30,7 +30,8 @@ public class MagneticTileRight : MagneticTileBaseScript
 
     void OnCollisionEnter(Collision otherObj)
     {
-        if (done == false) isTouching = true;
+        if (otherObj.gameObject.CompareTag("Player"))
+            if (done == false) isTouching = true;
     }
 
 }

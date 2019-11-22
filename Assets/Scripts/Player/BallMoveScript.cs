@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallMoveScript : MonoBehaviour
 {
-    Rigidbody rb;
+    public static Rigidbody rb;
     float speed = 5f;
     // Start is called before the first frame update
     void Start()

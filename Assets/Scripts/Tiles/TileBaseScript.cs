@@ -9,6 +9,8 @@ public class TileBaseScript : MonoBehaviour
     public bool isTouching = false;
     public int count;
     public bool done = false;
+    public Vector3 velocity = new Vector3( 0, 1, 0 );
+    public float gravity = 9.8f;
     // Start is called before the first frame update
     void Start()
     {
