@@ -7,7 +7,7 @@ public class MagneticTileForwardScript : MagneticTileBaseScript
     // Start is called before the first frame update
     void Start()
     {
-        type = "forward";
+        type = "magneticforward";
         count = 5;
         speed = 6;
     }
@@ -18,7 +18,7 @@ public class MagneticTileForwardScript : MagneticTileBaseScript
         if (isTouching && count > 0)
         {
             --count;
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.parent.Translate(Vector3.forward * speed * Time.deltaTime);
         }
         if (count == 0)
         {

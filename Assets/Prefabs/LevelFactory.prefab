@@ -51,7 +51,7 @@ MonoBehaviour:
     type: 3}
   magneticTileB: {fileID: 9196754687634405078, guid: d36dbd4901ccfbc4980c1670c9a10cc9,
     type: 3}
-  magneticTileF: {fileID: 4159996409235639815, guid: a45f0560f95baf8488b15ce1ccfefb6d,
+  magneticTileF: {fileID: 6762739121169110938, guid: 18303d814b335f94db1ae5e3d9214a1e,
     type: 3}
   magneticTileL: {fileID: 4159996409235639815, guid: a45f0560f95baf8488b15ce1ccfefb6d,
     type: 3}
@@ -59,3 +59,4 @@ MonoBehaviour:
     type: 3}
   tileManager: {fileID: 7484990419488847311, guid: b4e5507b9a1123e4baaee85c712dc8ba,
     type: 3}
+  tile: {fileID: 0}

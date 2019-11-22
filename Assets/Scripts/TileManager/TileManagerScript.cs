@@ -15,9 +15,14 @@ public class TileManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach(TileBaseScript tile in tilelist)
+        TileBaseScript lastforward;
+        TileBaseScript lastbase;
+        foreach (TileBaseScript tile in tilelist)
         {
-            //if (tile.type == "sliding") Destroy(tile.gameObject);
+            if (tile.type == "magneticforward") lastforward = tile;
+            else if (tile.type == "magneticbase") lastbase = tile;
+
+
         }
     }
 
