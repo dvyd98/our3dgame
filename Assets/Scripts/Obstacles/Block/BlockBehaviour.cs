@@ -40,7 +40,8 @@ public class BlockBehaviour : MonoBehaviour
 
     void OnTriggerStay(Collider otherObj)
     {
-        if (!otherObj.gameObject.CompareTag("Player"))
+        string tag = otherObj.gameObject.tag;
+        if (tag != "Player" && tag != "falling")
             transform.parent = otherObj.transform;
         else
         {

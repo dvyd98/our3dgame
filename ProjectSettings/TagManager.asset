@@ -13,6 +13,7 @@ TagManager:
   - magneticf
   - magneticgroup
   - obstacle
+  - falling
   layers:
   - Default
   - TransparentFX

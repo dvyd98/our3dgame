@@ -61,6 +61,8 @@ MonoBehaviour:
     type: 3}
   magneticTileR: {fileID: 8684063339314595319, guid: a698062024c9ca2488d58c66534ad80e,
     type: 3}
+  fallingTile: {fileID: 8917220165842874267, guid: a5c345fb321dbef4cabe98e0da2b6694,
+    type: 3}
   tileManager: {fileID: 7484990419488847311, guid: b4e5507b9a1123e4baaee85c712dc8ba,
     type: 3}
-  tile: {fileID: 0}
+  tile: {fileID: 5402114013596003304, guid: e873de0935f00d04a95c544b718b079f, type: 3}

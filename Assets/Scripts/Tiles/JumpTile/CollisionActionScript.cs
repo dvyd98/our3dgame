@@ -13,8 +13,7 @@ public class CollisionActionScript : TileBaseScript
     // Update is called once per frame
     void Update()
     {
-        velocity.y -= gravity * Time.deltaTime;
-        transform.position += velocity * Time.deltaTime;
+        
     }
 
     void OnCollisionEnter(Collision otherObj)
