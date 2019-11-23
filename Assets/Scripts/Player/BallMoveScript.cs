@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallMoveScript : MonoBehaviour
 {
-    Rigidbody rb;
+    public static Rigidbody rb;
     float speed = 5f;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class BallMoveScript : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         //rb.velocity = transform.forward * speed;
+        //transform.Translate(Vector3.forward * speed * Time.deltaTime);
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -38,5 +39,21 @@ public class BallMoveScript : MonoBehaviour
         }
         //rb.AddForce(new Vector3(0.0f, 0.0f, 2) * speed);
         //rb.AddForce(new Vector3(moveHorizontal, 0.0f, 0.0f) * speed);
+    }
+
+    void OnCollisionEnter(Collision otherObj)
+    {
+        if (otherObj.gameObject.CompareTag("magneticf"))
+            transform.parent = otherObj.transform;
+        else if (otherObj.gameObject.CompareTag("falling"))
+            transform.parent = otherObj.transform;
+    }
+
+    void OnCollisionStay(Collision otherObj)
+    {
+        if (otherObj.gameObject.CompareTag("magneticf"))
+            transform.parent = otherObj.transform;
+        else if (otherObj.gameObject.CompareTag("falling"))
+            transform.parent = otherObj.transform;
     }
 }

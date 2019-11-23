@@ -4,8 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - slidingTile
+  - blockObstacle
+  - woolBall
+  - jump
+  - normal
+  - sliding
+  - magneticb
+  - magneticf
+  - magneticgroup
   - obstacle
+  - falling
   layers:
   - Default
   - TransparentFX

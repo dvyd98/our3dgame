@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlidingTileMoveScript : MonoBehaviour
+public class SlidingTileMoveScript : TileBaseScript
 {
-    int count;
     bool left;
-    float speed = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
+        type = "sliding";
         count = 40;
+        speed = 1.0f;
         left = true;
     }
 
