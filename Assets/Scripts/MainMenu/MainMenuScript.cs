@@ -7,6 +7,9 @@ public class MainMenuScript : MonoBehaviour
 {
     public bool isPlayClicked;
     public bool isQuitClicked;
+    public bool isBackClicked;
+    public bool isHowtoClicked;
+    public bool isCreditsClicked;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,18 @@ public class MainMenuScript : MonoBehaviour
         if (isQuitClicked)
         {
             Application.Quit();
+        }
+        if (isHowtoClicked)
+        {
+            SceneManager.LoadScene("Howtoplay", LoadSceneMode.Single);
+        }
+        if (isBackClicked)
+        {
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
+        if (isCreditsClicked)
+        {
+            SceneManager.LoadScene("Credits", LoadSceneMode.Single);
         }
     }
 }
