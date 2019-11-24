@@ -48,7 +48,7 @@ public class AnvilBehaviour : MonoBehaviour
                 speed += acc;
                 break;
             case (int) states.RISING:
-                speed = 1.0f;
+                speed = acc;
                 if (transform.position.y < 1.5f)
                 {
                     transform.Translate(0.0f, speed * Time.deltaTime, 0.0f);
