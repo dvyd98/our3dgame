@@ -15,6 +15,7 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject magneticTileL;
     public GameObject magneticTileR;
     public GameObject fallingTile;
+    public GameObject anvil;
 
     public TileManagerScript tileManager;
     public TileBaseScript tile;
@@ -122,6 +123,11 @@ public class LevelFactoryScript : MonoBehaviour
                     if (obstacles[i] == 'w')
                     {
                         GameObject obj = (GameObject)Instantiate(woolBall, new Vector3(-2 + i, 0.5f, j), transform.rotation);
+                        obj.transform.parent = transform;
+                    }
+                    if (obstacles[i] == 'a')
+                    {
+                        GameObject obj = (GameObject)Instantiate(anvil, new Vector3(-2 + i, 1.5f, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                 }

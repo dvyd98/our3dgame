@@ -20,7 +20,7 @@ public class PlayerCollisions : MonoBehaviour
     {
         if (otherObj.gameObject.CompareTag("obstacle"))
         {
-            // TODO show fail screen
+            // TODO Game Over Screen
         }
     }
 }

@@ -20,20 +20,11 @@ public class DogBehaviour : MonoBehaviour
     {
         if (!otherObj.gameObject.CompareTag("Player"))
             transform.parent = otherObj.transform;
-        else
-        {
-            // TODO Gameover Screen
-        }
     }
 
     void OnTriggerStay(Collider otherObj)
     {
-        string tag = otherObj.gameObject.tag;
-        if (tag != "Player" && tag != "falling")
+        if (!otherObj.gameObject.CompareTag("Player"))
             transform.parent = otherObj.transform;
-        else
-        {
-            // TODO Gameover Screen
-        }
     }
 }
