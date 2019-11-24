@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockBehaviour : MonoBehaviour
+public class DogBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,7 +13,7 @@ public class BlockBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // TODO bajar el brazo cada X tiempo
     }
 
     void OnTriggerEnter(Collider otherObj)
