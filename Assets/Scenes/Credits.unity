@@ -307,7 +307,12 @@ TextMesh:
 
     Paula Zhao
 
-    David Agut'
+    David Agut
+
+
+    Special thanks to:
+
+    Daniela Zhao'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -501,6 +506,7 @@ MonoBehaviour:
   isQuitClicked: 0
   isBackClicked: 1
   isHowtoClicked: 0
+  isCreditsClicked: 0
 --- !u!65 &1584489395
 BoxCollider:
   m_ObjectHideFlags: 0
