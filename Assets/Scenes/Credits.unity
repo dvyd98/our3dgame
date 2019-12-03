@@ -246,7 +246,6 @@ GameObject:
   - component: {fileID: 988461176}
   - component: {fileID: 988461180}
   - component: {fileID: 988461179}
-  - component: {fileID: 988461178}
   - component: {fileID: 988461177}
   m_Layer: 0
   m_Name: Howto
@@ -282,18 +281,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.6, y: 1.4523442, z: 0}
   m_Center: {x: 3.3, y: -0.7261721, z: 0}
---- !u!114 &988461178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988461175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c9599bc8f98b143bc59ef3ca0a29c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!102 &988461179
 TextMesh:
   serializedVersion: 3

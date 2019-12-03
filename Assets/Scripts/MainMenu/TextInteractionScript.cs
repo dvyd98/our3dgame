@@ -7,7 +7,7 @@ public class TextInteractionScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().material.color = Color.black;
+        GetComponent<Renderer>().material.color = Color.white;
     }
 
     // Update is called once per frame
@@ -23,6 +23,6 @@ public class TextInteractionScript : MonoBehaviour
 
     void OnMouseExit()
     {
-        GetComponent<Renderer>().material.color = Color.black;
+        GetComponent<Renderer>().material.color = Color.white;
     }
 }

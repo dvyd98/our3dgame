@@ -264,6 +264,7 @@ MonoBehaviour:
   isQuitClicked: 0
   isBackClicked: 1
   isHowtoClicked: 0
+  isCreditsClicked: 0
 --- !u!65 &301080303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -360,7 +361,6 @@ GameObject:
   - component: {fileID: 422055392}
   - component: {fileID: 422055394}
   - component: {fileID: 422055393}
-  - component: {fileID: 422055395}
   - component: {fileID: 422055396}
   m_Layer: 0
   m_Name: Howto
@@ -451,18 +451,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &422055395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422055391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c9599bc8f98b143bc59ef3ca0a29c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &422055396
 BoxCollider:
   m_ObjectHideFlags: 0

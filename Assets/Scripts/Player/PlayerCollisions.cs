@@ -1,26 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollisions : MonoBehaviour
 {
+    bool isGod;
+    
     // Start is called before the first frame update
     void Start()
     {
+        isGod = false;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp("9"))
+        {
+            isGod = !isGod;
+        }
+
+        if (transform.position.y < -15)
+        {
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+        }
     }
 
-    void OnCollisionEnter(Collision otherObj)
+    void OnTriggerEnter(Collider otherObj)
     {
-        if (otherObj.gameObject.CompareTag("obstacle"))
+        if (otherObj.gameObject.CompareTag("obstacle") && !isGod)
         {
-            // TODO Game Over Screen
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
     }
 }
