@@ -38,8 +38,8 @@ public class SlidingTileMoveScript : TileBaseScript
 
     void OnTriggerEnter(Collider otherObj)
     {
-        string tag = otherObj.gameObject.tag;
-        if (tag == ("Player") || tag == "jump" || tag == "sliding_extra")
+        string otag = otherObj.tag;
+        if (otag == ("Player") || otag == "jump" || otag == "sliding_extra")
         {
             otherObj.transform.parent = transform;
         }
@@ -47,7 +47,8 @@ public class SlidingTileMoveScript : TileBaseScript
 
     void OnTriggerStay(Collider otherObj)
     {
-        if (tag == ("Player") || tag == "jump" || tag == "sliding_extra")
+        string otag = otherObj.tag;
+        if (otag == ("Player") || otag == "jump" || otag == "sliding_extra")
         {
             otherObj.transform.parent = transform;
         }
@@ -55,7 +56,8 @@ public class SlidingTileMoveScript : TileBaseScript
 
     void OnTriggerExit(Collider otherObj)
     {
-        if (tag == ("Player") || tag == "jump")
+        string otag = otherObj.tag;
+        if (otag == ("Player") || otag == "jump")
         {
             otherObj.transform.parent = null;
         }

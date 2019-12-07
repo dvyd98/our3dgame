@@ -18,12 +18,12 @@ public class SlidingExtraTileScript : MonoBehaviour
 
     void OnTriggerEnter(Collider otherObj)
     {
-        string tag = otherObj.gameObject.tag;
-        if (tag == "jump")
+        string otag = otherObj.tag;
+        if (otag == "jump")
         {
             transform.parent = otherObj.transform;
         }
-        else if (tag == ("Player"))
+        else if (otag == ("Player"))
         {
             otherObj.transform.parent = transform;
         }
@@ -31,11 +31,12 @@ public class SlidingExtraTileScript : MonoBehaviour
 
     void OnTriggerStay(Collider otherObj)
     {
-        if (tag == "jump")
+        string otag = otherObj.tag;
+        if (otag == "jump")
         {
             transform.parent = otherObj.transform;
         }
-        else if (tag == ("Player"))
+        else if (otag == ("Player"))
         {
             otherObj.transform.parent = transform;
         }
@@ -43,7 +44,8 @@ public class SlidingExtraTileScript : MonoBehaviour
 
     void OnTriggerExit(Collider otherObj)
     {
-        if (tag == ("Player"))
+        string otag = otherObj.tag;
+        if (otag == ("Player"))
         {
             otherObj.transform.parent = null;
         }

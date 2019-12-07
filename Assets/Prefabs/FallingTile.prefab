@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4589303987380961009}
   - component: {fileID: 4589303987380961014}
   - component: {fileID: 4589303987380961015}
-  - component: {fileID: 1061247975871963630}
   - component: {fileID: -6416240206754158578}
+  - component: {fileID: -2017565332364267890}
   m_Layer: 0
   m_Name: FallingTile
   m_TagString: falling
@@ -80,20 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1061247975871963630
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4589303987380961013}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &-6416240206754158578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +99,16 @@ MonoBehaviour:
   done: 0
   velocity: {x: 0, y: -1, z: 0}
   gravity: 9.8
+--- !u!65 &-2017565332364267890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4589303987380961013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

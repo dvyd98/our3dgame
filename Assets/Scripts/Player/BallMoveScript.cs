@@ -63,21 +63,22 @@ public class BallMoveScript : MonoBehaviour
 
     void OnCollisionEnter(Collision otherObj)
     {
-        string tag = otherObj.gameObject.tag;
-        if (tag == ("magneticf"))
+        string otag = otherObj.gameObject.tag;
+        if (otag == ("magneticf"))
             transform.parent = otherObj.transform;
     }
 
     void OnCollisionStay(Collision otherObj)
     {
-        if (tag == ("magneticf"))
+        string otag = otherObj.gameObject.tag;
+        if (otag == ("magneticf"))
             transform.parent = otherObj.transform;
     }
 
     void OnCollisionExit(Collision otherObj)
     {
-        string tag = otherObj.gameObject.tag;
-        if (tag != "falling")
+        string otag = otherObj.gameObject.tag;
+        if (otag != "falling")
         transform.parent = null;
 
     }
