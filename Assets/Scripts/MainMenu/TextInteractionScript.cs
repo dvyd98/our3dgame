@@ -18,7 +18,7 @@ public class TextInteractionScript : MonoBehaviour
 
     void OnMouseEnter()
     {
-        GetComponent<Renderer>().material.color = Color.red;
+        GetComponent<Renderer>().material.color = Color.yellow;
     }
 
     void OnMouseExit()

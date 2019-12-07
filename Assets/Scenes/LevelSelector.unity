@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 56480727}
   - component: {fileID: 56480726}
   m_Layer: 0
-  m_Name: Howto
+  m_Name: LVL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56480724}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8, y: 1, z: 0}
+  m_LocalPosition: {x: -8, y: 1, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2040910914}
@@ -168,12 +168,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayClicked: 0
-  isLVL1Clicked: 0
+  isLVL1Clicked: 1
   isLVL2Clicked: 0
   isLVL3Clicked: 0
   isQuitClicked: 0
   isBackClicked: 0
-  isHowtoClicked: 1
+  isHowtoClicked: 0
   isCreditsClicked: 0
 --- !u!65 &56480727
 BoxCollider:
@@ -208,7 +208,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56480724}
-  m_Text: How to play
+  m_Text: Level 1
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 301080303}
   - component: {fileID: 301080302}
   m_Layer: 0
-  m_Name: Quit
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,11 +382,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301080300}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8, y: 1, z: -6}
+  m_LocalPosition: {x: 5, y: 1, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2040910914}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &301080302
 MonoBehaviour:
@@ -404,8 +404,8 @@ MonoBehaviour:
   isLVL1Clicked: 0
   isLVL2Clicked: 0
   isLVL3Clicked: 0
-  isQuitClicked: 1
-  isBackClicked: 0
+  isQuitClicked: 0
+  isBackClicked: 1
   isHowtoClicked: 0
   isCreditsClicked: 0
 --- !u!65 &301080303
@@ -441,7 +441,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301080300}
-  m_Text: Quit
+  m_Text: Back
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -504,11 +504,9 @@ GameObject:
   - component: {fileID: 422055392}
   - component: {fileID: 422055394}
   - component: {fileID: 422055393}
-  - component: {fileID: 422055395}
   - component: {fileID: 422055396}
-  - component: {fileID: 422055397}
   m_Layer: 0
-  m_Name: Play
+  m_Name: ChooseLVL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,11 +520,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422055391}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8, y: 1, z: 3}
+  m_LocalPosition: {x: 0.17, y: 1, z: 8.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2040910914}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!102 &422055393
 TextMesh:
@@ -536,12 +534,12 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422055391}
-  m_Text: Play
+  m_Text: Choose a lvl
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
+  m_Anchor: 1
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 20
   m_FontStyle: 0
@@ -588,18 +586,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &422055395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422055391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c9599bc8f98b143bc59ef3ca0a29c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &422055396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -613,27 +599,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.6, y: 2.4000497, z: 0}
   m_Center: {x: 3.3, y: -1.2000248, z: -2.8425274e-15}
---- !u!114 &422055397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422055391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e45579c9e3403d4f9036da4a0d1f5bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayClicked: 1
-  isLVL1Clicked: 0
-  isLVL2Clicked: 0
-  isLVL3Clicked: 0
-  isQuitClicked: 0
-  isBackClicked: 0
-  isHowtoClicked: 0
-  isCreditsClicked: 0
---- !u!1 &778186576
+--- !u!1 &1182653638
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -641,73 +607,107 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 778186577}
-  - component: {fileID: 778186580}
-  - component: {fileID: 778186579}
-  - component: {fileID: 778186578}
+  - component: {fileID: 1182653639}
+  - component: {fileID: 1182653644}
+  - component: {fileID: 1182653643}
+  - component: {fileID: 1182653642}
+  - component: {fileID: 1182653641}
+  - component: {fileID: 1182653640}
   m_Layer: 0
-  m_Name: Title
+  m_Name: LVL3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &778186577
+--- !u!4 &1182653639
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778186576}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.08, y: 1, z: 7.98}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_GameObject: {fileID: 1182653638}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -8, y: 1, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2040910914}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!65 &778186578
+--- !u!114 &1182653640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182653638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e45579c9e3403d4f9036da4a0d1f5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayClicked: 0
+  isLVL1Clicked: 0
+  isLVL2Clicked: 0
+  isLVL3Clicked: 1
+  isQuitClicked: 0
+  isBackClicked: 0
+  isHowtoClicked: 0
+  isCreditsClicked: 0
+--- !u!65 &1182653641
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778186576}
+  m_GameObject: {fileID: 1182653638}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.6, y: 2.4000497, z: 0}
-  m_Center: {x: 3.3, y: -1.2000248, z: -2.8425274e-15}
---- !u!102 &778186579
+  m_Size: {x: 6.6, y: 2.3507848, z: 0}
+  m_Center: {x: 3.3, y: -1.1753924, z: -2.4924792e-15}
+--- !u!114 &1182653642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182653638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08c9599bc8f98b143bc59ef3ca0a29c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!102 &1182653643
 TextMesh:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778186576}
-  m_Text: Rolling Sky
+  m_GameObject: {fileID: 1182653638}
+  m_Text: Level 3
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 1
-  m_Alignment: 1
+  m_Anchor: 0
+  m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 300
+  m_FontSize: 20
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+  m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
   m_Color:
     serializedVersion: 2
-    rgba: 4294942976
---- !u!23 &778186580
+    rgba: 4294967295
+--- !u!23 &1182653644
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778186576}
+  m_GameObject: {fileID: 1182653638}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -718,7 +718,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+  - {fileID: 2100000, guid: 43d59b5c638b0664db55f3a4e4d130ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -940,11 +940,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 778186577}
   - {fileID: 422055392}
+  - {fileID: 301080301}
   - {fileID: 56480725}
   - {fileID: 2103550490}
-  - {fileID: 301080301}
+  - {fileID: 1182653639}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 2103550492}
   - component: {fileID: 2103550491}
   m_Layer: 0
-  m_Name: Credits
+  m_Name: LVL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -977,7 +977,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103550489}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8, y: 1, z: -3}
+  m_LocalPosition: {x: -8, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2040910914}
@@ -997,12 +997,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayClicked: 0
   isLVL1Clicked: 0
-  isLVL2Clicked: 0
+  isLVL2Clicked: 1
   isLVL3Clicked: 0
   isQuitClicked: 0
   isBackClicked: 0
   isHowtoClicked: 0
-  isCreditsClicked: 1
+  isCreditsClicked: 0
 --- !u!65 &2103550492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1036,7 +1036,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103550489}
-  m_Text: Credits
+  m_Text: Level 2
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1

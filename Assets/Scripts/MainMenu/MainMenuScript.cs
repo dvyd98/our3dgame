@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
     public bool isPlayClicked;
+    public bool isLVL1Clicked;
+    public bool isLVL2Clicked;
+    public bool isLVL3Clicked;
     public bool isQuitClicked;
     public bool isBackClicked;
     public bool isHowtoClicked;
@@ -26,7 +29,19 @@ public class MainMenuScript : MonoBehaviour
     {
         if (isPlayClicked)
         {
+            SceneManager.LoadScene("LevelSelector", LoadSceneMode.Single);
+        }
+        if (isLVL1Clicked)
+        {
             SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+        }
+        if (isLVL2Clicked)
+        {
+            SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+        }
+        if (isLVL3Clicked)
+        {
+            SceneManager.LoadScene("Level2", LoadSceneMode.Single);
         }
         if (isQuitClicked)
         {
