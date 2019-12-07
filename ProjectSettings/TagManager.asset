@@ -13,6 +13,7 @@ TagManager:
   - magneticgroup
   - obstacle
   - falling
+  - sliding_extra
   layers:
   - Default
   - TransparentFX

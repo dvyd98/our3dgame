@@ -43,9 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472885469d5d04e0d8133928bb1cfb46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 
   normalTile: {fileID: 2294789950864933642, guid: e873de0935f00d04a95c544b718b079f,
     type: 3}
   slidingTile: {fileID: 2092175612645202462, guid: 5797e7bac3bc15c46bfb5ebd8b490fad,
+    type: 3}
+  slidingGroup: {fileID: 5773456886098587973, guid: d3883a2b1c6837849806bf172ea7fb8d,
     type: 3}
   jumpTile: {fileID: 6322157222520894107, guid: ef895395b6166254187a7b2d1ec4178d,
     type: 3}
@@ -64,6 +67,4 @@ MonoBehaviour:
   fallingTile: {fileID: 8917220165842874267, guid: a5c345fb321dbef4cabe98e0da2b6694,
     type: 3}
   anvil: {fileID: 1178388402949601748, guid: 139c617de43f45a47997b8c4917c5125, type: 3}
-  tileManager: {fileID: 7484990419488847311, guid: b4e5507b9a1123e4baaee85c712dc8ba,
-    type: 3}
   tile: {fileID: 5402114013596003304, guid: e873de0935f00d04a95c544b718b079f, type: 3}

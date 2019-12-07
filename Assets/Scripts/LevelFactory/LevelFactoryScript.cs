@@ -9,6 +9,7 @@ public class LevelFactoryScript : MonoBehaviour
 
     public GameObject normalTile;
     public GameObject slidingTile;
+    public GameObject slidingGroup;
     public GameObject jumpTile;
     public GameObject blockObstacle;
     public GameObject woolBall;
@@ -69,6 +70,12 @@ public class LevelFactoryScript : MonoBehaviour
                 else if (tiles[i] == 's')
                 {
                     obj = Instantiate(slidingTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj.transform.parent = transform;
+                    tile = obj.GetComponent<SlidingTileMoveScript>();
+                }
+                else if (tiles[i] == 'z')
+                {
+                    obj = Instantiate(slidingGroup, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
                     tile = obj.GetComponent<SlidingTileMoveScript>();
                 }
