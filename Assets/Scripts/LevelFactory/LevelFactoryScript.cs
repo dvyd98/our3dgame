@@ -5,6 +5,8 @@ using System.IO;
 
 public class LevelFactoryScript : MonoBehaviour
 {
+    public string level;
+
     public GameObject normalTile;
     public GameObject slidingTile;
     public GameObject jumpTile;
@@ -17,13 +19,12 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject fallingTile;
     public GameObject anvil;
 
-    public TileManagerScript tileManager;
     public TileBaseScript tile;
 
     // Start is called before the first frame update
     void Start()
     {
-        readTextFile("./Assets/Scripts/LevelFactory/level1.txt");
+        readTextFile("./Assets/Scripts/LevelFactory/" + level + ".txt");
     }
 
     // Update is called once per frame
@@ -108,7 +109,6 @@ public class LevelFactoryScript : MonoBehaviour
                     tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
                 }
 
-                tileManager.AddTile(ref tile);
             }
 
             if (obstacles.Length != 0)
