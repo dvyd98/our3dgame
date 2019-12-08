@@ -29,7 +29,7 @@ public class MainMenuScript : MonoBehaviour
     void OnMouseUp()
     {
 
-        MusicPlayerScript.musicPlayer.PlayOneShot(MusicPlayerScript.menu_sound);
+        MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.menu_sound);
         if (isPlayClicked)
         {
             SceneManager.LoadScene("LevelSelector", LoadSceneMode.Single);

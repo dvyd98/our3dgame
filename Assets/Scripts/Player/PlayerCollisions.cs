@@ -24,6 +24,7 @@ public class PlayerCollisions : MonoBehaviour
 
         if (transform.position.y < -15)
         {
+            MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
     }
@@ -32,6 +33,7 @@ public class PlayerCollisions : MonoBehaviour
     {
         if (otherObj.gameObject.CompareTag("obstacle") && !isGod)
         {
+            MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
     }

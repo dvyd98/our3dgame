@@ -11,9 +11,15 @@ public class MusicPlayerScript : MonoBehaviour
     public bool isLevel3;
     private static bool isMusicLoaded;
     public static AudioSource musicPlayer;
+    public static AudioSource sound_effectPlayer;
     public static AudioClip menu_sound;
     public static AudioClip mouseover;
+
     public static AudioClip level1_track;
+    public static AudioClip level2_track;
+    public static AudioClip level3_track;
+
+    public static AudioClip death;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +29,7 @@ public class MusicPlayerScript : MonoBehaviour
             loadMusic();
         }
         playBackground();
+        sound_effectPlayer.volume = 0.5f;
     }
 
     // Update is called once per frame
@@ -34,19 +41,18 @@ public class MusicPlayerScript : MonoBehaviour
     private void loadMusic()
     {
         musicPlayer = gameObject.AddComponent<AudioSource>();
+        sound_effectPlayer = gameObject.AddComponent<AudioSource>();
         menu_sound = (AudioClip)Resources.Load("menu_click");
         mouseover = (AudioClip)Resources.Load("mouseover");
         level1_track = (AudioClip)Resources.Load("level1_track");
+
+        death = (AudioClip)Resources.Load("death");
         isMusicLoaded = true;
     }
 
     private void playBackground()
     {
-        AudioSource[] audioList = FindObjectsOfType<AudioSource>();
-        foreach(AudioSource asound in audioList)
-        {
-            asound.Stop();
-        }
+        musicPlayer.Stop();
 
         if (isMenu)
         {
