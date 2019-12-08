@@ -45,6 +45,7 @@ public class MusicPlayerScript : MonoBehaviour
         menu_sound = (AudioClip)Resources.Load("menu_click");
         mouseover = (AudioClip)Resources.Load("mouseover");
         level1_track = (AudioClip)Resources.Load("level1_track");
+        level2_track = (AudioClip)Resources.Load("level2_track");
 
         death = (AudioClip)Resources.Load("death");
         isMusicLoaded = true;
@@ -64,7 +65,7 @@ public class MusicPlayerScript : MonoBehaviour
         }
         else if (isLevel2)
         {
-
+            musicPlayer.PlayOneShot(level2_track);
         }
         else if (isLevel3)
         {
