@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BallMoveScript : MonoBehaviour
 {
+    public static bool canMove;
+
     public static Rigidbody rb;
     float speed = 5f;
     bool isUnlocked;
@@ -13,6 +15,7 @@ public class BallMoveScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         isUnlocked = true;
+        canMove = true;
     }
 
     // Update is called once per frame
@@ -26,7 +29,7 @@ public class BallMoveScript : MonoBehaviour
         {
             isUnlocked = !isUnlocked;
         }
-        if (isUnlocked)
+        if (isUnlocked && canMove)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -46,7 +49,7 @@ public class BallMoveScript : MonoBehaviour
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
             }
         }
-        else
+        else if (canMove)
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
             if (Input.GetKey(KeyCode.A))

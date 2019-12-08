@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class PlayerCollisions : MonoBehaviour
 {
     bool isGod;
+    int count;
     
     // Start is called before the first frame update
     void Start()
     {
         isGod = false;
+        count = 60;
         
     }
 
@@ -27,6 +29,14 @@ public class PlayerCollisions : MonoBehaviour
             MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
+        if (!BallMoveScript.canMove)
+        {
+            if (count == 0)
+            {
+                SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            }
+            else --count;
+        }
     }
 
     void OnTriggerEnter(Collider otherObj)
@@ -34,7 +44,12 @@ public class PlayerCollisions : MonoBehaviour
         if (otherObj.gameObject.CompareTag("obstacle") && !isGod)
         {
             MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            BallMoveScript.canMove = false;
+            Vector3 direction = gameObject.transform.position - otherObj.transform.position;
+            direction *= 10;
+            direction.y = 10;
+            BallMoveScript.rb.AddForce(direction, ForceMode.Impulse);
+            //SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
     }
 }
