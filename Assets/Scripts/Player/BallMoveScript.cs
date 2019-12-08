@@ -13,7 +13,6 @@ public class BallMoveScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         isUnlocked = true;
-        MusicPlayerScript.musicPlayer.PlayOneShot(MusicPlayerScript.level1_track);
     }
 
     // Update is called once per frame

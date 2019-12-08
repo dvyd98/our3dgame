@@ -18,6 +18,7 @@ public class TextInteractionScript : MonoBehaviour
 
     void OnMouseEnter()
     {
+        MusicPlayerScript.musicPlayer.PlayOneShot(MusicPlayerScript.mouseover);
         GetComponent<Renderer>().material.color = Color.yellow;
     }
 
