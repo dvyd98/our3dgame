@@ -13,10 +13,11 @@ public class MainMenuScript : MonoBehaviour
     public bool isBackClicked;
     public bool isHowtoClicked;
     public bool isCreditsClicked;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,6 +28,8 @@ public class MainMenuScript : MonoBehaviour
 
     void OnMouseUp()
     {
+
+        MusicPlayerScript.musicPlayer.PlayOneShot(MusicPlayerScript.menu_sound);
         if (isPlayClicked)
         {
             SceneManager.LoadScene("LevelSelector", LoadSceneMode.Single);
