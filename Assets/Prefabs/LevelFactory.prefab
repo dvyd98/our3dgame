@@ -68,4 +68,5 @@ MonoBehaviour:
   fallingTile: {fileID: 4589303987380961013, guid: c780177d1fbff7f4e86b9fb8b2a46bca,
     type: 3}
   anvil: {fileID: 1178388402949601748, guid: 139c617de43f45a47997b8c4917c5125, type: 3}
+  dog: {fileID: 5813169584471236311, guid: a88ef2879352a4b4385d4f05d19c434c, type: 3}
   tile: {fileID: 5402114013596003304, guid: e873de0935f00d04a95c544b718b079f, type: 3}
