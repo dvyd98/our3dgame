@@ -49,6 +49,7 @@ public class MainMenuScript : MonoBehaviour
         }
         else if (isQuitClicked)
         {
+            PlayerPrefs.DeleteAll(); //we use this to reset settings to changes to the standalone player apply. Fucking retarded i know
             Application.Quit();
         }
         else if (isHowtoClicked)

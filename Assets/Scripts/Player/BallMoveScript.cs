@@ -8,6 +8,7 @@ public class BallMoveScript : MonoBehaviour
     public int currentLvlInspector;
     public static int currentLvl;
     public static string state;
+    private bool doneJump;
 
     public static Rigidbody rb;
     float speed = 5f;
@@ -19,6 +20,7 @@ public class BallMoveScript : MonoBehaviour
         rb.freezeRotation = true;
         isUnlocked = false;
         canMove = false;
+        doneJump = false;
         state = "alive";
         currentLvl = currentLvlInspector;
     }
@@ -34,38 +36,48 @@ public class BallMoveScript : MonoBehaviour
         {
             isUnlocked = !isUnlocked;
         }
-        if (isUnlocked && canMove && state == "alive")
+        if (state == "alive")
         {
-            if (Input.GetKey(KeyCode.W))
+            if (isUnlocked && canMove)
+            {
+                if (Input.GetKey(KeyCode.W))
+                {
+                    transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    transform.Translate(Vector3.back * speed * Time.deltaTime);
+                }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    transform.Translate(Vector2.left * speed * Time.deltaTime);
+                }
+
+                if (Input.GetKey(KeyCode.D))
+                {
+                    transform.Translate(Vector2.right * speed * Time.deltaTime);
+                }
+            }
+            else if (canMove)
             {
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                transform.Translate(Vector3.back * speed * Time.deltaTime);
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                if (Input.GetKey(KeyCode.A))
+                {
+                    transform.Translate(Vector2.left * speed * Time.deltaTime);
+                }
+
+                if (Input.GetKey(KeyCode.D))
+                {
+                    transform.Translate(Vector2.right * speed * Time.deltaTime);
+                }
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (transform.position.y >= 2.69f && !doneJump)
             {
-                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                rb.AddForce(new Vector3(0, -40, 0), ForceMode.Impulse);
+                doneJump = true;
             }
-        }
-        else if (canMove && state == "alive")
-        {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.Translate(Vector2.left * speed * Time.deltaTime);
-            }
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                transform.Translate(Vector2.right * speed * Time.deltaTime);
-            }
+            else doneJump = false;
         }
     }
 
