@@ -42,33 +42,33 @@ public class BallMoveScript : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.W))
                 {
-                    transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                    transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
                 }
                 if (Input.GetKey(KeyCode.S))
                 {
-                    transform.Translate(Vector3.back * speed * Time.deltaTime);
+                    transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
                 }
                 if (Input.GetKey(KeyCode.A))
                 {
-                    transform.Translate(Vector2.left * speed * Time.deltaTime);
+                    transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
                 }
 
                 if (Input.GetKey(KeyCode.D))
                 {
-                    transform.Translate(Vector2.right * speed * Time.deltaTime);
+                    transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
                 }
             }
             else if (canMove)
             {
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
                 if (Input.GetKey(KeyCode.A))
                 {
-                    transform.Translate(Vector2.left * speed * Time.deltaTime);
+                    transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
                 }
 
                 if (Input.GetKey(KeyCode.D))
                 {
-                    transform.Translate(Vector2.right * speed * Time.deltaTime);
+                    transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
                 }
             }
 
@@ -99,7 +99,7 @@ public class BallMoveScript : MonoBehaviour
     {
         string otag = otherObj.gameObject.tag;
         if (otag != "falling")
-        transform.parent = null;
+            transform.parent = null;
 
     }
 
