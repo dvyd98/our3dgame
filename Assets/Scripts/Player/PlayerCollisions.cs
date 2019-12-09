@@ -52,6 +52,7 @@ public class PlayerCollisions : MonoBehaviour
             direction.y = 10;
             BallMoveScript.rb.AddForce(direction, ForceMode.Impulse);
             //SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            print("collision!");
         }
     }
 }

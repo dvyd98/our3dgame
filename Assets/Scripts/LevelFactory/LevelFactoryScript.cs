@@ -146,7 +146,7 @@ public class LevelFactoryScript : MonoBehaviour
                     }
                     if (obstacles[i] == 'd')
                     {
-                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-2 + i, 1.5f, j), transform.rotation);
+                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                 }
