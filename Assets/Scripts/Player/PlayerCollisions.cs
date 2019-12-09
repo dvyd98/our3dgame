@@ -29,7 +29,7 @@ public class PlayerCollisions : MonoBehaviour
             MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
-        if (!BallMoveScript.canMove)
+        if (BallMoveScript.state == "dying")
         {
             if (count == 0)
             {
@@ -44,7 +44,7 @@ public class PlayerCollisions : MonoBehaviour
         if (otherObj.gameObject.CompareTag("obstacle") && !isGod)
         {
             MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
-            BallMoveScript.canMove = false;
+            BallMoveScript.state = "dying";
             Vector3 direction = gameObject.transform.position - otherObj.transform.position;
             direction *= 10;
             direction.y = 10;

@@ -7,6 +7,7 @@ public class BallMoveScript : MonoBehaviour
     public static bool canMove;
     public int currentLvlInspector;
     public static int currentLvl;
+    public static string state;
 
     public static Rigidbody rb;
     float speed = 5f;
@@ -16,8 +17,9 @@ public class BallMoveScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        isUnlocked = true;
-        canMove = true;
+        isUnlocked = false;
+        canMove = false;
+        state = "alive";
         currentLvl = currentLvlInspector;
     }
 
@@ -32,7 +34,7 @@ public class BallMoveScript : MonoBehaviour
         {
             isUnlocked = !isUnlocked;
         }
-        if (isUnlocked && canMove)
+        if (isUnlocked && canMove && state == "alive")
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -52,7 +54,7 @@ public class BallMoveScript : MonoBehaviour
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
             }
         }
-        else if (canMove)
+        else if (canMove && state == "alive")
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
             if (Input.GetKey(KeyCode.A))

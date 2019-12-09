@@ -12,14 +12,16 @@ public class MusicPlayerScript : MonoBehaviour
     private static bool isMusicLoaded;
     public static AudioSource musicPlayer;
     public static AudioSource sound_effectPlayer;
+
+    public static AudioClip death;
     public static AudioClip menu_sound;
     public static AudioClip mouseover;
+    public static AudioClip jump;
 
     public static AudioClip level1_track;
     public static AudioClip level2_track;
     public static AudioClip level3_track;
 
-    public static AudioClip death;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,10 +46,12 @@ public class MusicPlayerScript : MonoBehaviour
         sound_effectPlayer = gameObject.AddComponent<AudioSource>();
         menu_sound = (AudioClip)Resources.Load("menu_click");
         mouseover = (AudioClip)Resources.Load("mouseover");
+
         level1_track = (AudioClip)Resources.Load("level1_track");
         level2_track = (AudioClip)Resources.Load("level2_track");
 
         death = (AudioClip)Resources.Load("death");
+        jump = (AudioClip)Resources.Load("jump");
         isMusicLoaded = true;
     }
 

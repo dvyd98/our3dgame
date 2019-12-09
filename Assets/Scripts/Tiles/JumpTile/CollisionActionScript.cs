@@ -23,6 +23,7 @@ public class CollisionActionScript : TileBaseScript
             if (otherObj.gameObject.tag == "Player")
             {
                 otherObj.rigidbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.jump);
                 done = true;
             }
         }
