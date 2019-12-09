@@ -5,6 +5,8 @@ using UnityEngine;
 public class BallMoveScript : MonoBehaviour
 {
     public static bool canMove;
+    public int currentLvlInspector;
+    public static int currentLvl;
 
     public static Rigidbody rb;
     float speed = 5f;
@@ -16,6 +18,7 @@ public class BallMoveScript : MonoBehaviour
         rb.freezeRotation = true;
         isUnlocked = true;
         canMove = true;
+        currentLvl = currentLvlInspector;
     }
 
     // Update is called once per frame

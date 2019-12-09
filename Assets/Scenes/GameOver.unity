@@ -260,6 +260,7 @@ MonoBehaviour:
   isBackClicked: 1
   isHowtoClicked: 0
   isCreditsClicked: 0
+  isTryAgainClicked: 0
 --- !u!1 &543832992
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45579c9e3403d4f9036da4a0d1f5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayClicked: 1
+  isPlayClicked: 0
   isLVL1Clicked: 0
   isLVL2Clicked: 0
   isLVL3Clicked: 0
@@ -400,6 +401,7 @@ MonoBehaviour:
   isBackClicked: 0
   isHowtoClicked: 0
   isCreditsClicked: 0
+  isTryAgainClicked: 1
 --- !u!1 &668770276
 GameObject:
   m_ObjectHideFlags: 0
