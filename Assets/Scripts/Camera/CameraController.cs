@@ -10,13 +10,13 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        offset = new Vector3(0, 1, -2.5f);
+        offset = new Vector3(0, 2, -2.5f);
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = new Vector3(0, 1, player.transform.position.z) + offset;
+        transform.position = new Vector3(0, player.transform.position.y, player.transform.position.z) + offset;
 
         transform.LookAt(player.transform.position + new Vector3(-player.transform.position.x,0,3));
     }
