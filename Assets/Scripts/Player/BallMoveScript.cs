@@ -72,9 +72,9 @@ public class BallMoveScript : MonoBehaviour
                 }
             }
 
-            if (transform.position.y >= 2.69f && !doneJump)
+            if (transform.position.y >= 2.2f && !doneJump)
             {
-                rb.AddForce(new Vector3(0, -40, 0), ForceMode.Impulse);
+                rb.AddForce(new Vector3(0, -20, 0), ForceMode.Impulse);
                 doneJump = true;
             }
             else doneJump = false;
