@@ -22,6 +22,8 @@ public class PlayerCollisions : MonoBehaviour
         if (Input.GetKeyUp("9"))
         {
             isGod = !isGod;
+            if (isGod) BallMoveScript.rb.useGravity = false;
+            else BallMoveScript.rb.useGravity = true;
         }
 
         if (transform.position.y < -15)
