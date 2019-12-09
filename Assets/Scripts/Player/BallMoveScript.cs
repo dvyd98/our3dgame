@@ -8,26 +8,19 @@ public class BallMoveScript : MonoBehaviour
     public int currentLvlInspector;
     public static int currentLvl;
     public static string state;
+    private bool doneJump;
 
     public static Rigidbody rb;
     float speed = 5f;
-
-    private Animation anim;
-
     bool isUnlocked;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        anim = gameObject.GetComponent<Animation>();
-        foreach (AnimationState state in anim)
-        {
-            print(state);
-            state.speed = 0.5f;
-        }
         isUnlocked = false;
         canMove = false;
+        doneJump = false;
         state = "alive";
         currentLvl = currentLvlInspector;
     }
@@ -41,41 +34,50 @@ public class BallMoveScript : MonoBehaviour
         //transform.Translate(Vector3.forward * speed * Time.deltaTime);
         if (Input.GetKeyUp("0"))
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
             isUnlocked = !isUnlocked;
         }
-        if (isUnlocked && canMove && state == "alive")
+        if (state == "alive")
         {
-            if (Input.GetKey(KeyCode.W))
+            if (isUnlocked && canMove)
+            {
+                if (Input.GetKey(KeyCode.W))
+                {
+                    transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
+                }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
+                }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
+                }
+
+                if (Input.GetKey(KeyCode.D))
+                {
+                    transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
+                }
+            }
+            else if (canMove)
             {
                 transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
+                if (Input.GetKey(KeyCode.A))
+                {
+                    transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
+                }
+
+                if (Input.GetKey(KeyCode.D))
+                {
+                    transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
+                }
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (transform.position.y >= 2.2f && !doneJump)
             {
-                transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
+                rb.AddForce(new Vector3(0, -20, 0), ForceMode.Impulse);
+                doneJump = true;
             }
-        }
-        else if (canMove && state == "alive")
-        {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
-            }
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
-            }
+            else doneJump = false;
         }
     }
 
@@ -97,7 +99,7 @@ public class BallMoveScript : MonoBehaviour
     {
         string otag = otherObj.gameObject.tag;
         if (otag != "falling")
-        transform.parent = null;
+            transform.parent = null;
 
     }
 
