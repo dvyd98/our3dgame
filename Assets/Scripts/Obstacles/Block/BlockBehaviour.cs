@@ -18,13 +18,15 @@ public class BlockBehaviour : MonoBehaviour
 
     void OnTriggerEnter(Collider otherObj)
     {
-        if (!otherObj.gameObject.CompareTag("Player"))
+        string otag = otherObj.tag;
+        if (otag != ("Player") && otag != "magneticf" && otag != "magneticgroup")
             transform.parent = otherObj.transform;
     }
 
     void OnTriggerStay(Collider otherObj)
     {
-        if (!otherObj.gameObject.CompareTag("Player"))
+        string otag = otherObj.tag;
+        if (otag != ("Player") && otag != "magneticf" && otag != "magneticgroup")
             transform.parent = otherObj.transform;
 
     }

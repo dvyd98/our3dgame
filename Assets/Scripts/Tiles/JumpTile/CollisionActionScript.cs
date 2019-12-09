@@ -18,9 +18,14 @@ public class CollisionActionScript : TileBaseScript
 
     void OnCollisionEnter(Collision otherObj)
     {
-        if (otherObj.gameObject.tag == "Player")
+        if (!done)
         {
-            otherObj.rigidbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+            if (otherObj.gameObject.tag == "Player")
+            {
+                otherObj.rigidbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+                MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.jump);
+                done = true;
+            }
         }
     }
 }

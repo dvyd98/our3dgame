@@ -246,7 +246,6 @@ GameObject:
   - component: {fileID: 988461176}
   - component: {fileID: 988461180}
   - component: {fileID: 988461179}
-  - component: {fileID: 988461178}
   - component: {fileID: 988461177}
   m_Layer: 0
   m_Name: Howto
@@ -263,7 +262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988461175}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8.91, y: 1, z: 7.15}
+  m_LocalPosition: {x: -8, y: 1, z: 7.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 671733622}
@@ -282,18 +281,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.6, y: 1.4523442, z: 0}
   m_Center: {x: 3.3, y: -0.7261721, z: 0}
---- !u!114 &988461178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988461175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c9599bc8f98b143bc59ef3ca0a29c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!102 &988461179
 TextMesh:
   serializedVersion: 3
@@ -322,7 +309,7 @@ TextMesh:
   m_FontSize: 16
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -343,7 +330,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43d59b5c638b0664db55f3a4e4d130ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -448,13 +435,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043186705}
-  m_LocalRotation: {x: 0.4924039, y: -0.08682408, z: 0.15038373, w: 0.85286856}
+  m_LocalRotation: {x: 0.15038373, y: 0.85286856, z: -0.4924039, w: 0.08682408}
   m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 20}
+  m_LocalEulerAnglesHint: {x: 60, y: 180, z: 20}
 --- !u!1 &1584489392
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584489392}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.46, y: 1, z: -6.74}
+  m_LocalPosition: {x: 5, y: 1, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 671733622}
@@ -503,6 +490,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayClicked: 0
+  isLVL1Clicked: 0
+  isLVL2Clicked: 0
+  isLVL3Clicked: 0
   isQuitClicked: 0
   isBackClicked: 1
   isHowtoClicked: 0
@@ -550,7 +540,7 @@ TextMesh:
   m_FontSize: 20
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -571,7 +561,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43d59b5c638b0664db55f3a4e4d130ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -642,7 +632,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b42ae58dc2f371c4bb7d9a8b9dd6a80e, type: 2}
+  - {fileID: 2100000, guid: 0cd019ff771ff6843b46165e97ee6118, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

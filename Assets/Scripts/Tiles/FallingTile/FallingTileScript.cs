@@ -20,7 +20,7 @@ public class FallingTileScript : TileBaseScript
         if (isActive)
         {
             velocity.y -= gravity * Time.deltaTime;
-            transform.parent.position += velocity * Time.deltaTime;
+            transform.position += velocity * Time.deltaTime;
         }
     }
 

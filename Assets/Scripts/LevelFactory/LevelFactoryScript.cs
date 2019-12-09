@@ -5,8 +5,11 @@ using System.IO;
 
 public class LevelFactoryScript : MonoBehaviour
 {
+    public string level;
+
     public GameObject normalTile;
     public GameObject slidingTile;
+    public GameObject slidingGroup;
     public GameObject jumpTile;
     public GameObject blockObstacle;
     public GameObject woolBall;
@@ -14,16 +17,16 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject magneticTileF;
     public GameObject magneticTileL;
     public GameObject magneticTileR;
+    public GameObject end;
     public GameObject fallingTile;
     public GameObject anvil;
 
-    public TileManagerScript tileManager;
     public TileBaseScript tile;
 
     // Start is called before the first frame update
     void Start()
     {
-        readTextFile("./Assets/Scripts/LevelFactory/level1.txt");
+        readTextFile("./Assets/Scripts/LevelFactory/" + level + ".txt");
     }
 
     // Update is called once per frame
@@ -71,6 +74,12 @@ public class LevelFactoryScript : MonoBehaviour
                     obj.transform.parent = transform;
                     tile = obj.GetComponent<SlidingTileMoveScript>();
                 }
+                else if (tiles[i] == 'z')
+                {
+                    obj = Instantiate(slidingGroup, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj.transform.parent = transform;
+                    tile = obj.GetComponent<SlidingTileMoveScript>();
+                }
                 else if (tiles[i] == 'j')
                 {
                     obj = Instantiate(jumpTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
@@ -108,7 +117,6 @@ public class LevelFactoryScript : MonoBehaviour
                     tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
                 }
 
-                tileManager.AddTile(ref tile);
             }
 
             if (obstacles.Length != 0)
@@ -128,6 +136,11 @@ public class LevelFactoryScript : MonoBehaviour
                     if (obstacles[i] == 'a')
                     {
                         GameObject obj = (GameObject)Instantiate(anvil, new Vector3(-2 + i, 1.5f, j), transform.rotation);
+                        obj.transform.parent = transform;
+                    }
+                    if (obstacles[i] == 'e')
+                    {
+                        GameObject obj = (GameObject)Instantiate(end, new Vector3(-2 + i, 0.3f, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                 }
