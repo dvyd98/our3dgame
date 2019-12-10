@@ -14,11 +14,14 @@ public class AnvilBehaviour : MonoBehaviour
     
     private int state;
 
+    private AudioSource audiosource;
+
     // Start is called before the first frame update
     void Start()
     {
         cont = counter;
         state = (int) states.IDLE;
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,6 +46,7 @@ public class AnvilBehaviour : MonoBehaviour
                 }
                 if (transform.position.y == 0.4f)
                 {
+                    audiosource.Play();
                     state = (int)states.RISING;
                 }
                 speed += acc;

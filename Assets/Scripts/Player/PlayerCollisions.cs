@@ -45,14 +45,15 @@ public class PlayerCollisions : MonoBehaviour
     {
         if (otherObj.gameObject.CompareTag("obstacle") && !isGod)
         {
-            MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
-            BallMoveScript.state = "dying";
-            Vector3 direction = gameObject.transform.position - otherObj.transform.position;
-            direction *= 10;
-            direction.y = 10;
-            BallMoveScript.rb.AddForce(direction, ForceMode.Impulse);
-            //SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-            print("collision!");
+            if (BallMoveScript.state != "dying")
+            {
+                MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
+                Vector3 direction = gameObject.transform.position - otherObj.transform.position;
+                direction *= 10;
+                direction.y = 10;
+                BallMoveScript.rb.AddForce(direction, ForceMode.Impulse);
+                BallMoveScript.state = "dying";
+            }
         }
     }
 }
