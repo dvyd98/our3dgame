@@ -126,7 +126,7 @@ public class LevelFactoryScript : MonoBehaviour
                 {
                     if (obstacles[i] == 'b')
                     {
-                        GameObject obj = (GameObject)Instantiate(blockObstacle, new Vector3(-2 + i, 0.3f, j), transform.rotation);
+                        GameObject obj = (GameObject)Instantiate(blockObstacle, new Vector3(-2 + i, 0.3f, j), Quaternion.Euler(new Vector3(90, 0, 0)));
                         obj.transform.parent = transform;
                     }
                     if (obstacles[i] == 'w')
@@ -141,12 +141,12 @@ public class LevelFactoryScript : MonoBehaviour
                     }
                     if (obstacles[i] == 'e')
                     {
-                        GameObject obj = (GameObject)Instantiate(end, new Vector3(-2 + i, 0.3f, j), transform.rotation);
+                        GameObject obj = (GameObject)Instantiate(end, new Vector3(-2 + i, 0.1f, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                     if (obstacles[i] == 'd')
                     {
-                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0, j), transform.rotation);
+                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.4f, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                 }

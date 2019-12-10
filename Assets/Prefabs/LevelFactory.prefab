@@ -52,7 +52,7 @@ MonoBehaviour:
     type: 3}
   jumpTile: {fileID: 6322157222520894107, guid: ef895395b6166254187a7b2d1ec4178d,
     type: 3}
-  blockObstacle: {fileID: 2163544408113879494, guid: a3082170752b8be48a58e860ee999712,
+  blockObstacle: {fileID: 4222536030891037237, guid: a2eeacecec070404e9d3f988dfeb1ab4,
     type: 3}
   woolBall: {fileID: 1859547353010962630, guid: 41c810fc86635d740b8aafceb6761937,
     type: 3}
