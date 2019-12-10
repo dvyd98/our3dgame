@@ -14,6 +14,7 @@ public class MainMenuScript : MonoBehaviour
     public bool isHowtoClicked;
     public bool isCreditsClicked;
     public bool isTryAgainClicked;
+    public bool isNextLVLClicked;
 
     // Start is called before the first frame update
     void Start()
@@ -70,6 +71,10 @@ public class MainMenuScript : MonoBehaviour
             else if (BallMoveScript.currentLvl == 2) SceneManager.LoadScene("Level2", LoadSceneMode.Single);
             else if (BallMoveScript.currentLvl == 3) SceneManager.LoadScene("Level3", LoadSceneMode.Single);
             else SceneManager.LoadScene("LevelSelector", LoadSceneMode.Single);
+        }
+        else if (isNextLVLClicked)
+        {
+            SceneManager.LoadScene("LevelSelector", LoadSceneMode.Single);
         }
     }
 }

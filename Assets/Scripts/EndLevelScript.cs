@@ -19,6 +19,7 @@ public class EndLevelScript : MonoBehaviour
 
     void OnTriggerEnter(Collider otherObj)
     {
-        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+        MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.you_win);
+        SceneManager.LoadScene("LevelBeat", LoadSceneMode.Single);
     }
 }
