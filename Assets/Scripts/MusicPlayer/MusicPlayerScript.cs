@@ -63,7 +63,7 @@ public class MusicPlayerScript : MonoBehaviour
 
     private void playBackground()
     {
-        musicPlayer.volume = 1.0f;
+        musicPlayer.volume = 0.8f;
         if (isMenu)
         {
             musicPlayer.volume = 0.2f;

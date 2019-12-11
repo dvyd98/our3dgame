@@ -127,7 +127,7 @@ public class LevelFactoryScript : MonoBehaviour
                 {
                     if (obstacles[i] == 'b')
                     {
-                        GameObject obj = (GameObject)Instantiate(blockObstacle, new Vector3(-2 + i, 0.0f, j), Quaternion.Euler(new Vector3(90, 0, 0)));
+                        GameObject obj = (GameObject)Instantiate(blockObstacle, new Vector3(-2 + i, 0.05f, j), Quaternion.Euler(new Vector3(90, 0, 0)));
                         obj.transform.parent = transform;
                     }
                     if (obstacles[i] == 'w')

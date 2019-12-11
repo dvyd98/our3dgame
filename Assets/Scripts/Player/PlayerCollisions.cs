@@ -7,6 +7,7 @@ public class PlayerCollisions : MonoBehaviour
 {
     bool isGod;
     int count;
+
     
     // Start is called before the first frame update
     void Start()
@@ -26,10 +27,14 @@ public class PlayerCollisions : MonoBehaviour
             else BallMoveScript.rb.useGravity = true;
         }
 
-        if (transform.position.y < -15)
+        if (transform.position.y < -5)
         {
-            MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            if (BallMoveScript.state != "dying")
+            {
+                BallMoveScript.state = "dying";
+                MusicPlayerScript.sound_effectPlayer.PlayOneShot(MusicPlayerScript.death);
+                SceneFaderScript.FadeOut();
+            }
         }
         if (BallMoveScript.state == "dying")
         {
@@ -53,6 +58,7 @@ public class PlayerCollisions : MonoBehaviour
                 direction.y = 10;
                 BallMoveScript.rb.AddForce(direction, ForceMode.Impulse);
                 BallMoveScript.state = "dying";
+                SceneFaderScript.FadeOut();
             }
         }
     }
