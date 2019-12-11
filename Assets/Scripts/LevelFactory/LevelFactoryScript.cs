@@ -21,6 +21,7 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject fallingTile;
     public GameObject anvil;
     public GameObject dog;
+    public GameObject laser;
 
     public TileBaseScript tile;
 
@@ -147,6 +148,11 @@ public class LevelFactoryScript : MonoBehaviour
                     if (obstacles[i] == 'd')
                     {
                         GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.4f, j), transform.rotation);
+                        obj.transform.parent = transform;
+                    }
+                    if (obstacles[i] == 'l')
+                    {
+                        GameObject obj = (GameObject)Instantiate(laser, new Vector3(-2f + i, 3, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                 }
