@@ -19,7 +19,7 @@ public class WoolBallBehaviour : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime, 0.0f, 0.0f);
-        if (transform.position.x > startingPosX + 4.0 || transform.position.x < startingPosX)
+        if (transform.position.x > startingPosX + 2.0 || transform.position.x < startingPosX -2.0)
         {
             direction *= -1.0f;
         }
