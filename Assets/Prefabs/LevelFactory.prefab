@@ -54,7 +54,7 @@ MonoBehaviour:
     type: 3}
   blockObstacle: {fileID: 4222536030891037237, guid: a2eeacecec070404e9d3f988dfeb1ab4,
     type: 3}
-  woolBall: {fileID: 1859547353010962630, guid: 41c810fc86635d740b8aafceb6761937,
+  woolBall: {fileID: 8115126896285076900, guid: fdda2a1700edef849ae430f90ad57f87,
     type: 3}
   magneticTileB: {fileID: 9196754687634405078, guid: d36dbd4901ccfbc4980c1670c9a10cc9,
     type: 3}
@@ -69,4 +69,5 @@ MonoBehaviour:
     type: 3}
   anvil: {fileID: 1178388402949601748, guid: 139c617de43f45a47997b8c4917c5125, type: 3}
   dog: {fileID: 5813169584471236311, guid: a88ef2879352a4b4385d4f05d19c434c, type: 3}
+  laser: {fileID: 2922564475207897523, guid: 852828539ad67da4dbbd69eb72cd9e18, type: 3}
   tile: {fileID: 5402114013596003304, guid: e873de0935f00d04a95c544b718b079f, type: 3}
