@@ -4,9 +4,14 @@ ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      74: -5905721876513369231
-    second: Armature|BulldogRoar
-  externalObjects: {}
+      74: -2320721823651706422
+    second: Armature|BajarGarra
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palette.001
+    second: {fileID: 2100000, guid: 3b8529226184448f5bc1d7a86b642c3b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -35,8 +40,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|BulldogRoar
-      takeName: Armature|BulldogRoar
+      name: Armature|BajarGarra
+      takeName: Armature|BajarGarra
       internalID: 0
       firstFrame: 0
       lastFrame: 8
