@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5952211273036144079}
   m_Layer: 0
   m_Name: Chorrazo_end
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,9 +100,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7494685630618003252}
+  - component: {fileID: 7877102970236341314}
   m_Layer: 0
   m_Name: Chorrazo
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +123,20 @@ Transform:
   m_Father: {fileID: 6739344801075772184}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &7877102970236341314
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143549688032329047}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2164139046166543677
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +538,7 @@ GameObject:
   - component: {fileID: 3176751851035094692}
   m_Layer: 0
   m_Name: chorroGrande
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -641,7 +656,7 @@ GameObject:
   - component: {fileID: 7386831466001150332}
   - component: {fileID: 4657269938759707660}
   - component: {fileID: 4405626899576147071}
-  - component: {fileID: 5112037896742668080}
+  - component: {fileID: 8820903328425803101}
   m_Layer: 0
   m_Name: bocaBombero
   m_TagString: obstacle
@@ -734,20 +749,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!64 &5112037896742668080
-MeshCollider:
+--- !u!114 &8820903328425803101
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6301561849016599173}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8718dfe587a48942a73c624b905a3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6808672755740475788
 GameObject:
   m_ObjectHideFlags: 0

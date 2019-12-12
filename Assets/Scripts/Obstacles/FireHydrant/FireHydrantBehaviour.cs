@@ -10,7 +10,9 @@ public class FireHydrantBehaviour : MonoBehaviour
     enum states {IDLE, SHOOTING}
     int state;
     Animation anim;
-    int iddleNextDrop = 100;
+    int iddleNextDrop;
+    bool shooted;
+    bool once;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,9 @@ public class FireHydrantBehaviour : MonoBehaviour
         anim = GetComponent<Animation>();
         limit = 4;
         player = GameObject.FindGameObjectWithTag("Player");
+        iddleNextDrop = 50;
+        shooted = false;
+        once = false;
     }
 
     // Update is called once per frame
@@ -26,22 +31,45 @@ public class FireHydrantBehaviour : MonoBehaviour
     {
 
         float dist = Math.Abs(transform.position.z - player.transform.position.z);
-        print(String.Format("{0}, {1}", transform.position.z, player.transform.position.z));
 
-        if (dist < limit) state = (int)states.SHOOTING;
+        if (dist < limit && !shooted) state = (int)states.SHOOTING;
 
         switch(state) {
             case (int)states.IDLE: {
                 if (!anim.IsPlaying("WaterStandBy")) {
                     if (iddleNextDrop-- == 0) {
                         anim.Play("WaterStandBy");
-                        iddleNextDrop = 100;
+                        iddleNextDrop = 50;
                     }
                 }
                 break;
             }
             case (int)states.SHOOTING: {
-                anim.Play("ShootWater");
+                if (!shooted) {
+                    foreach (AnimationState state in anim) {
+                        state.speed = 0.2F;
+                    }
+                    if (!once) {
+                        anim.Play("ShootWater");
+                        once = true;
+                    }
+
+                    if (anim.IsPlaying("ShootWater")){
+                        // update mesh
+                        Collider col = GetComponentInChildren<CapsuleCollider>();
+                        print(col.transform.position.y);
+                        col.transform.position -= new Vector3(0,0,-0.1f);
+                    }
+
+                    if (!anim.IsPlaying("ShootWater") && once) {
+                        shooted = true;
+                        foreach (AnimationState state in anim) {
+                            state.speed = 1F;
+                        }
+                    }
+                }
+                
+                state = (int) states.IDLE;
                 break;
             }
         }
