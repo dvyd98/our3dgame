@@ -133,7 +133,7 @@ public class LevelFactoryScript : MonoBehaviour
                     }
                     if (obstacles[i] == 'w')
                     {
-                        GameObject obj = (GameObject)Instantiate(woolBall, new Vector3(-2 + i, 0.5f, j), transform.rotation);
+                        GameObject obj = (GameObject)Instantiate(woolBall, new Vector3(-2 + i, 0.05f, j), Quaternion.Euler(new Vector3(90, 0, 0)));
                         obj.transform.parent = transform;
                     }
                     if (obstacles[i] == 'a')

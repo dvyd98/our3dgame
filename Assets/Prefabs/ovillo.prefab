@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 4312985318454475698}
   - component: {fileID: 3554040725577331285}
   - component: {fileID: 3007725051425378387}
+  - component: {fileID: 7699120654769296315}
   m_Layer: 0
   m_Name: ovillo
   m_TagString: obstacle
@@ -348,7 +349,7 @@ Animator:
   m_GameObject: {fileID: 8115126896285076900}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9e7f34084461e154eb66605f27abc693, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a03cd1b6cb2d0be48a482aac792342fa, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -420,3 +421,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.24
   m_Center: {x: 0.05, y: 0, z: -0.2}
+--- !u!111 &7699120654769296315
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115126896285076900}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 372131238592203458, guid: 9e7f34084461e154eb66605f27abc693,
+    type: 3}
+  m_Animations:
+  - {fileID: 372131238592203458, guid: 9e7f34084461e154eb66605f27abc693, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
