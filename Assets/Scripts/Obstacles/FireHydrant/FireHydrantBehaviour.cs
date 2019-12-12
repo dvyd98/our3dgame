@@ -18,6 +18,7 @@ public class FireHydrantBehaviour : MonoBehaviour
         state = (int) states.IDLE;
         anim = GetComponent<Animation>();
         limit = 4;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
