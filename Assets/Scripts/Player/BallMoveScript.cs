@@ -55,8 +55,6 @@ public class BallMoveScript : MonoBehaviour
             break;
         }
 
-        if (Input.GetKey(KeyCode.W)) stateMov = statesMov.FRONT;
-        if (Input.GetKey(KeyCode.S)) stateMov = statesMov.BACK;
         if (Input.GetKey(KeyCode.A)) stateMov = statesMov.LEFT;
         else {
             if (isUnlocked) stateMov = statesMov.IDDLE;
@@ -67,6 +65,8 @@ public class BallMoveScript : MonoBehaviour
             if (isUnlocked) stateMov = statesMov.IDDLE;
             else stateMov = statesMov.FRONT;
         }
+        if (Input.GetKey(KeyCode.W)) stateMov = statesMov.FRONT;
+        if (Input.GetKey(KeyCode.S)) stateMov = statesMov.BACK;
 
         if (Input.GetKeyUp("0"))
         {
@@ -114,7 +114,7 @@ public class BallMoveScript : MonoBehaviour
                 }
             }
 
-            if (transform.position.y >= 2.0f && !doneJump)
+            if (transform.position.y >= 1.92f && !doneJump)
             {
                 rb.AddForce(new Vector3(0, -28, 0), ForceMode.Impulse);
                 doneJump = true;
