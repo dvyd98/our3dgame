@@ -93,7 +93,6 @@ j.....j| bbbbb
   sjz  
        
        
-       
   sjz  
        
        
@@ -130,8 +129,7 @@ j.....j| bbbbb
        
        
    .j  |   b    
-       
-       
+         
        
   j.   |   b   
        
