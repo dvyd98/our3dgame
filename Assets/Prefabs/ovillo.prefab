@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 3007725051425378387}
   m_Layer: 0
   m_Name: ovillo
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,7 +348,7 @@ Animator:
   m_GameObject: {fileID: 8115126896285076900}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9e7f34084461e154eb66605f27abc693, type: 3}
-  m_Controller: {fileID: 9100000, guid: a03cd1b6cb2d0be48a482aac792342fa, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
