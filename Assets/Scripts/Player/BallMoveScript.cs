@@ -16,10 +16,12 @@ public class BallMoveScript : MonoBehaviour
     Animation anim;
 
     enum states {LEFT, FRONT, RIGHT};
-    enum statesMov {IDDLE, LEFT, FRONT, BACK, RIGHT};
+    enum keys {A, W, S, D};
 
     states stateAnim;
-    statesMov stateMov;
+
+    bool[] keyPressed = {false, false, false, false};
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,41 +34,18 @@ public class BallMoveScript : MonoBehaviour
         currentLvl = currentLvlInspector;
         anim = GetComponent<Animation>();
         stateAnim = states.FRONT;
-        stateMov = statesMov.FRONT;
     }
 
     // Update is called once per frame
     void Update()
     {
+        onKeyDown();
+        onKeyRelease();
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         //rb.velocity = transform.forward * speed;
         //transform.Translate(Vector3.forward * speed * Time.deltaTime);
-
-        switch(stateAnim) {
-            case states.FRONT:
-                if (!anim.IsPlaying("catWalkFront")) anim.Play("catWalkFront");
-            break;
-            case states.LEFT:
-                if (!anim.IsPlaying("catWalkLeft")) anim.Play("catWalkLeft");
-            break;
-            case states.RIGHT:
-                if (!anim.IsPlaying("catWalkRight")) anim.Play("catWalkRight");
-            break;
-        }
-
-        if (Input.GetKey(KeyCode.A)) stateMov = statesMov.LEFT;
-        else {
-            if (isUnlocked) stateMov = statesMov.IDDLE;
-            else stateMov = statesMov.FRONT;
-        }
-        if (Input.GetKey(KeyCode.D)) stateMov = statesMov.RIGHT;
-        else if (stateMov != statesMov.LEFT){
-            if (isUnlocked) stateMov = statesMov.IDDLE;
-            else stateMov = statesMov.FRONT;
-        }
-        if (Input.GetKey(KeyCode.W)) stateMov = statesMov.FRONT;
-        if (Input.GetKey(KeyCode.S)) stateMov = statesMov.BACK;
 
         if (Input.GetKeyUp("0"))
         {
@@ -76,41 +55,33 @@ public class BallMoveScript : MonoBehaviour
         {
             if (isUnlocked && canMove)
             {
-                switch(stateMov) {
-                    case statesMov.FRONT:
+                stateAnim = states.FRONT;
+                if (keyPressed[(int)keys.W]) {
                     transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
-                    stateAnim = states.FRONT;
-                    break;
-                    case statesMov.BACK:
+                }
+                if (keyPressed[(int)keys.S]) {
                     transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
-                    stateAnim = states.FRONT;
-                    break;
-                    case statesMov.LEFT:
+                }
+                if (keyPressed[(int)keys.A]) {
                     transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
                     stateAnim = states.LEFT;
-                    break;
-                    case statesMov.RIGHT:
+                }
+                if (keyPressed[(int)keys.D]) {
                     transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
                     stateAnim = states.RIGHT;
-                    break;
-                    case statesMov.IDDLE:
-                    stateAnim = states.FRONT;
-                    break;
                 }
             }
             else if (canMove)
             {
                 transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
-                switch(stateMov) {
-                    case statesMov.LEFT:
+                stateAnim = states.FRONT;
+                if (keyPressed[(int)keys.A]) {
                     transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
                     stateAnim = states.LEFT;
-                    break;
-                    case  statesMov.RIGHT:
+                }
+                if (keyPressed[(int)keys.D]) {
                     transform.Translate(Vector2.right * speed * Time.deltaTime, Space.World);
                     stateAnim = states.RIGHT;
-                    break;
-                    default: stateAnim = states.FRONT; break;
                 }
             }
 
@@ -137,6 +108,18 @@ public class BallMoveScript : MonoBehaviour
                     state.speed = 0;
                 }
         }
+
+        switch(stateAnim) {
+            case states.FRONT:
+                if (!anim.IsPlaying("catWalkFront")) anim.Play("catWalkFront");
+            break;
+            case states.LEFT:
+                if (!anim.IsPlaying("catWalkLeft")) anim.Play("catWalkLeft");
+            break;
+            case states.RIGHT:
+                if (!anim.IsPlaying("catWalkRight")) anim.Play("catWalkRight");
+            break;
+        }
     }
 
     void OnCollisionEnter(Collision otherObj)
@@ -161,4 +144,17 @@ public class BallMoveScript : MonoBehaviour
 
     }
 
+    private void onKeyDown() {
+        if (Input.GetKey(KeyCode.A) || Input.GetKeyDown(KeyCode.A)) keyPressed[(int) keys.A] = true;
+        if (Input.GetKey(KeyCode.S) || Input.GetKeyDown(KeyCode.S)) keyPressed[(int) keys.S] = true;
+        if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.D)) keyPressed[(int) keys.D] = true;
+        if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.W)) keyPressed[(int) keys.W] = true;
+    }
+
+    private void onKeyRelease() {
+        if (Input.GetKeyUp(KeyCode.A)) keyPressed[(int) keys.A] = false;
+        if (Input.GetKeyUp(KeyCode.S)) keyPressed[(int) keys.S] = false;
+        if (Input.GetKeyUp(KeyCode.D)) keyPressed[(int) keys.D] = false;
+        if (Input.GetKeyUp(KeyCode.W)) keyPressed[(int) keys.W] = false;
+    }
 }

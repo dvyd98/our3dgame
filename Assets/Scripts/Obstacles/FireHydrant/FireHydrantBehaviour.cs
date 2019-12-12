@@ -57,7 +57,6 @@ public class FireHydrantBehaviour : MonoBehaviour
                     if (anim.IsPlaying("ShootWater")){
                         // update mesh
                         Collider col = GetComponentInChildren<CapsuleCollider>();
-                        print(col.transform.position.y);
                         col.transform.position -= new Vector3(0,0,-0.1f);
                     }
 
