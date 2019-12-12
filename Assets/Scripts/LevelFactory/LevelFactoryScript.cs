@@ -85,7 +85,7 @@ public class LevelFactoryScript : MonoBehaviour
                 }
                 else if (tiles[i] == 'j')
                 {
-                    obj = Instantiate(jumpTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
+                    obj = Instantiate(jumpTile, new Vector3(-2 + i, 0, j), Quaternion.Euler(new Vector3(0, 180, 0))) as GameObject;
                     obj.transform.parent = transform;
                     tile = obj.GetComponent<CollisionActionScript>();
                 }
@@ -148,7 +148,7 @@ public class LevelFactoryScript : MonoBehaviour
                     }
                     if (obstacles[i] == 'd')
                     {
-                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.4f, j), transform.rotation);
+                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.1f, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
                     if (obstacles[i] == 'l')
