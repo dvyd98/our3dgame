@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846448450fc97dd478c588e4c80aaf99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 8007360234796215724, guid: 983542fedf90dc347b0cc372ebca02ab, type: 3}
   limit: 4
 --- !u!65 &4657269938759707660
 BoxCollider:

@@ -70,4 +70,6 @@ MonoBehaviour:
   anvil: {fileID: 1178388402949601748, guid: 139c617de43f45a47997b8c4917c5125, type: 3}
   dog: {fileID: 5813169584471236311, guid: a88ef2879352a4b4385d4f05d19c434c, type: 3}
   laser: {fileID: 2922564475207897523, guid: 852828539ad67da4dbbd69eb72cd9e18, type: 3}
+  fireHydrant: {fileID: 6301561849016599173, guid: 05362656e9ae3f140a20e6bf346b8800,
+    type: 3}
   tile: {fileID: 5402114013596003304, guid: e873de0935f00d04a95c544b718b079f, type: 3}
