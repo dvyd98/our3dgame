@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class DogBehaviour : MonoBehaviour
 {
+    Animation anim;
+    float wait;
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animation>();
+        foreach (AnimationState state in anim) {
+            state.speed = 0.3F;
+        }
+        anim.Play("Armature|BajarGarra");
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    }
-
-    void OnCollisionEnter(Collision otherObj)
-    {
-        if (!otherObj.gameObject.CompareTag("Player"))
-            transform.parent = otherObj.transform;
-    }
-
-    void OnCollisionStay(Collision otherObj)
-    {
-        if (!otherObj.gameObject.CompareTag("Player"))
-            transform.parent = otherObj.transform;
     }
 
 }

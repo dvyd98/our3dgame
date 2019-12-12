@@ -656,7 +656,6 @@ GameObject:
   - component: {fileID: 7386831466001150332}
   - component: {fileID: 4657269938759707660}
   - component: {fileID: 4405626899576147071}
-  - component: {fileID: 8820903328425803101}
   m_Layer: 0
   m_Name: bocaBombero
   m_TagString: obstacle
@@ -749,18 +748,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &8820903328425803101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6301561849016599173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8718dfe587a48942a73c624b905a3eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6808672755740475788
 GameObject:
   m_ObjectHideFlags: 0
