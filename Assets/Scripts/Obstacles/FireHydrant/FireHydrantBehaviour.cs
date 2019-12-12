@@ -26,7 +26,6 @@ public class FireHydrantBehaviour : MonoBehaviour
     {
 
         float dist = Math.Abs(transform.position.z - player.transform.position.z);
-        print(String.Format("{0}, {1}", transform.position.z, player.transform.position.z));
 
         if (dist < limit) state = (int)states.SHOOTING;
 
