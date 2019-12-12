@@ -21,6 +21,7 @@ public class LevelFactoryScript : MonoBehaviour
     public GameObject fallingTile;
     public GameObject anvil;
     public GameObject dog;
+    public GameObject god;
     public GameObject laser;
     public GameObject fireHydrant;
 
@@ -147,6 +148,14 @@ public class LevelFactoryScript : MonoBehaviour
                         obj.transform.parent = transform;
                     }
                     if (obstacles[i] == 'd')
+                    {
+                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-0.5f + i, 0.1f, j), transform.rotation);
+                        Quaternion quaternion = obj.transform.rotation;
+                        quaternion.y += 180.0f;
+                        obj.transform.rotation = quaternion;
+                        obj.transform.parent = transform;
+                    }
+                    if (obstacles[i] == 'g')
                     {
                         GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.1f, j), transform.rotation);
                         obj.transform.parent = transform;
