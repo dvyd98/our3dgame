@@ -34,7 +34,7 @@ public class MusicPlayerScript : MonoBehaviour
             loadMusic();
         }
         playBackground();
-        sound_effectPlayer.volume = 0.6f;
+        sound_effectPlayer.volume = 0.5f;
     }
 
     // Update is called once per frame
@@ -63,7 +63,7 @@ public class MusicPlayerScript : MonoBehaviour
 
     private void playBackground()
     {
-        musicPlayer.volume = 0.5f;
+        musicPlayer.volume = 0.8f;
         if (isMenu)
         {
             musicPlayer.volume = 0.2f;

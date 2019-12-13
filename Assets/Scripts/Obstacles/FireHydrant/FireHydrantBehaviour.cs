@@ -13,6 +13,7 @@ public class FireHydrantBehaviour : MonoBehaviour
     int iddleNextDrop;
     bool shooted;
     bool once;
+    private AudioSource audiosource;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class FireHydrantBehaviour : MonoBehaviour
         iddleNextDrop = 50;
         shooted = false;
         once = false;
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,10 +49,11 @@ public class FireHydrantBehaviour : MonoBehaviour
             case (int)states.SHOOTING: {
                 if (!shooted) {
                     foreach (AnimationState state in anim) {
-                        state.speed = 0.2F;
+                        state.speed = 1.5F;
                     }
                     if (!once) {
                         anim.Play("ShootWater");
+                        audiosource.Play();
                         once = true;
                     }
 
