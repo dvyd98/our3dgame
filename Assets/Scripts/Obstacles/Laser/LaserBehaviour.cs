@@ -8,11 +8,13 @@ public class LaserBehaviour : MonoBehaviour
     public float speed = 1f;
     public float limit = 35.0f;
     float angle = 0.0f;
+    private AudioSource audiosource;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        audiosource = GetComponent<AudioSource>();
+        audiosource.Play();
     }
 
     // Update is called once per frame

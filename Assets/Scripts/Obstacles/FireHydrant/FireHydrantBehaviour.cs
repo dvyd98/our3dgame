@@ -77,5 +77,20 @@ public class FireHydrantBehaviour : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider otherObj)
+    {
+        string otag = otherObj.tag;
+        if (otag != ("Player") && otag != "magneticf" && otag != "magneticgroup" && otag != "obstacle")
+            transform.parent = otherObj.transform;
+    }
+
+    void OnTriggerStay(Collider otherObj)
+    {
+        string otag = otherObj.tag;
+        if (otag != ("Player") && otag != "magneticf" && otag != "magneticgroup" && otag != "obstacle")
+            transform.parent = otherObj.transform;
+
+    }
+
 
 }
