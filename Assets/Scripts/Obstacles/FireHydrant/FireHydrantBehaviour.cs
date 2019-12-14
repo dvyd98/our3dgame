@@ -19,7 +19,7 @@ public class FireHydrantBehaviour : MonoBehaviour
     {
         state = (int) states.IDLE;
         anim = GetComponent<Animation>();
-        limit = 4;
+        limit = 6;
         player = GameObject.FindGameObjectWithTag("Player");
         iddleNextDrop = 50;
         shooted = false;
