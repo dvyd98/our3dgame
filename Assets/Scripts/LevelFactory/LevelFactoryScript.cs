@@ -146,6 +146,14 @@ public class LevelFactoryScript : MonoBehaviour
                         GameObject obj = (GameObject)Instantiate(end, new Vector3(-2 + i, 0.1f, j), transform.rotation);
                         obj.transform.parent = transform;
                     }
+                    if (obstacles[i] == 'g')
+                    {
+                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.1f, j), transform.rotation);
+                        Quaternion quaternion = obj.transform.rotation;
+                        quaternion.y += 180.0f;
+                        obj.transform.rotation = quaternion;
+                        obj.transform.parent = transform;
+                    }
                     if (obstacles[i] == 'd')
                     {
                         GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.1f, j), transform.rotation);
@@ -160,6 +168,14 @@ public class LevelFactoryScript : MonoBehaviour
                     {
                         GameObject obj = (GameObject)Instantiate(fireHydrant, new Vector3(-2 + i, 0.05f, j), Quaternion.Euler(new Vector3(90, 180, 0)));
                         obj.transform.parent = transform;
+                    }
+                    if (obstacles[i] == 'y')
+                    {
+                        GameObject obj = (GameObject)Instantiate(fireHydrant, new Vector3(-2 + i, 0.05f, j), Quaternion.Euler(new Vector3(90, 90, 0)));
+                    }
+                    if (obstacles[i] == 'z')
+                    {
+                        GameObject obj = (GameObject)Instantiate(fireHydrant, new Vector3(-2 + i, 0.05f, j), Quaternion.Euler(new Vector3(90, 270, 0)));
                     }
                 }
             }

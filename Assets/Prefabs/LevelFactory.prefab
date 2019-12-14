@@ -69,6 +69,7 @@ MonoBehaviour:
     type: 3}
   anvil: {fileID: 1178388402949601748, guid: 139c617de43f45a47997b8c4917c5125, type: 3}
   dog: {fileID: 4411047299435870915, guid: 26556b27e095a2e4a877b69e7d80c3fe, type: 3}
+  god: {fileID: 4411047299435870915, guid: 26556b27e095a2e4a877b69e7d80c3fe, type: 3}
   laser: {fileID: 2922564475207897523, guid: 852828539ad67da4dbbd69eb72cd9e18, type: 3}
   fireHydrant: {fileID: 6301561849016599173, guid: 05362656e9ae3f140a20e6bf346b8800,
     type: 3}
