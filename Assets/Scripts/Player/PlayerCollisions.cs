@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCollisions : MonoBehaviour
 {
-    bool isGod;
+    public static bool isGod;
     int count;
 
     
