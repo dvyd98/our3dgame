@@ -93,31 +93,26 @@ public class LevelFactoryScript : MonoBehaviour
                 {
                     obj = Instantiate(magneticTileB, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
-                    tile = obj.GetComponent<MagneticTileBaseScript>();
                 }
                 else if (tiles[i] == 'f')
                 {
                     obj = Instantiate(magneticTileF, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
-                    tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
                 }
                 else if (tiles[i] == 'l')
                 {
                     obj = Instantiate(magneticTileL, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
-                    tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
                 }
                 else if (tiles[i] == 'r')
                 {
                     obj = Instantiate(magneticTileR, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
-                    tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
                 }
                 else if (tiles[i] == 'g')
                 {
                     obj = Instantiate(fallingTile, new Vector3(-2 + i, 0, j), transform.rotation) as GameObject;
                     obj.transform.parent = transform;
-                    tile = obj.GetComponentInChildren<MagneticTileForwardScript>();
                 }
 
             }
@@ -143,15 +138,12 @@ public class LevelFactoryScript : MonoBehaviour
                     }
                     if (obstacles[i] == 'e')
                     {
-                        GameObject obj = (GameObject)Instantiate(end, new Vector3(-2 + i, 0.1f, j), transform.rotation);
+                        GameObject obj = (GameObject)Instantiate(end, new Vector3(-2 + i, 0.1f, j), Quaternion.Euler(new Vector3(0, 180, 0)));
                         obj.transform.parent = transform;
                     }
                     if (obstacles[i] == 'g')
                     {
-                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.1f, j), transform.rotation);
-                        Quaternion quaternion = obj.transform.rotation;
-                        quaternion.y += 180.0f;
-                        obj.transform.rotation = quaternion;
+                        GameObject obj = (GameObject)Instantiate(dog, new Vector3(-1.5f + i, 0.1f, j), Quaternion.Euler(new Vector3(0, 180, 0)));
                         obj.transform.parent = transform;
                     }
                     if (obstacles[i] == 'd')

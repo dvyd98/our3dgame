@@ -130,11 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6762739121169110939}
     m_Modifications:
-    - target: {fileID: 4159996409235639815, guid: a45f0560f95baf8488b15ce1ccfefb6d,
-        type: 3}
-      propertyPath: m_Name
-      value: MagneticTileForward
-      objectReference: {fileID: 0}
     - target: {fileID: 4159996409235639811, guid: a45f0560f95baf8488b15ce1ccfefb6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -158,7 +153,7 @@ PrefabInstance:
     - target: {fileID: 4159996409235639811, guid: a45f0560f95baf8488b15ce1ccfefb6d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4159996409235639811, guid: a45f0560f95baf8488b15ce1ccfefb6d,
         type: 3}
@@ -168,7 +163,7 @@ PrefabInstance:
     - target: {fileID: 4159996409235639811, guid: a45f0560f95baf8488b15ce1ccfefb6d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4159996409235639811, guid: a45f0560f95baf8488b15ce1ccfefb6d,
         type: 3}
@@ -183,12 +178,17 @@ PrefabInstance:
     - target: {fileID: 4159996409235639811, guid: a45f0560f95baf8488b15ce1ccfefb6d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4159996409235639811, guid: a45f0560f95baf8488b15ce1ccfefb6d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159996409235639815, guid: a45f0560f95baf8488b15ce1ccfefb6d,
+        type: 3}
+      propertyPath: m_Name
+      value: MagneticTileForward
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a45f0560f95baf8488b15ce1ccfefb6d, type: 3}
