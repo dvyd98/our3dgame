@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4822141469389343624}
   - component: {fileID: 8561603881671182383}
   m_Layer: 0
-  m_Name: Anvil 1
+  m_Name: AnvilLVL2
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

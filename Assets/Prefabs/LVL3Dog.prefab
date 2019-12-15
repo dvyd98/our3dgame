@@ -81,7 +81,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3b8529226184448f5bc1d7a86b642c3b, type: 2}
+  - {fileID: 2100000, guid: cf88c06061e044c30bfab5cfe440e3d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 3738371450453873279}
   - component: {fileID: 5246207760207074813}
   m_Layer: 0
-  m_Name: LVL2Dog (1)
+  m_Name: LVL3Dog
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

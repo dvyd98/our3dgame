@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6372480935515178092}
   - component: {fileID: 8631804292819559575}
   m_Layer: 0
-  m_Name: JumpTile 1
+  m_Name: JumpTileLVL2
   m_TagString: jump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a5cbf1d2594df049aea1677dd3d43c8, type: 2}
+  - {fileID: 2100000, guid: b13ad6f57f673422b967efea684408f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

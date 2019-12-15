@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 2926427601729243605}
   - component: {fileID: 577154731019275277}
   m_Layer: 0
-  m_Name: bocaBomberoLVL2 1
+  m_Name: bocaBomberoLVL3
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

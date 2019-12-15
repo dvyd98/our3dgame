@@ -98,6 +98,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagneticTileLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 6586969626642744091, guid: 36f8ce84e23497848b7e3ed093366696,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 73a1bc237f9c54737ab1709a8fc6a68c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f8ce84e23497848b7e3ed093366696, type: 3}
 --- !u!4 &9126949863373179627 stripped

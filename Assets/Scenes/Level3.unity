@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -579,6 +579,66 @@ PrefabInstance:
       propertyPath: level
       value: level3
       objectReference: {fileID: 0}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: normalTile
+      value: 
+      objectReference: {fileID: 6783545738631545688, guid: afc71dc19f6db5b44b09478c2f1df709,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: slidingTile
+      value: 
+      objectReference: {fileID: 4316091021567050715, guid: bc07c285c392e534e91efb448a0878fd,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: slidingGroup
+      value: 
+      objectReference: {fileID: 4919541001915646172, guid: 46bba00cf39bbcb44977006e7a92b86d,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: jumpTile
+      value: 
+      objectReference: {fileID: 6208939657926718398, guid: 6874fd6059f53e642a5a76868ddaa4f2,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: blockObstacle
+      value: 
+      objectReference: {fileID: 2408821055858936907, guid: 8438351e47d04944ea848a2c747ab905,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: woolBall
+      value: 
+      objectReference: {fileID: 2347647049323531219, guid: 0ef597932edfed6448ae1eab9ecec8d6,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: magneticTileB
+      value: 
+      objectReference: {fileID: 786884238905886294, guid: 4460aa974d067c94a99194cfc7634b10,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: fallingTile
+      value: 
+      objectReference: {fileID: 4463147261293559215, guid: 46559fd98ace21944a93d297f181ea78,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: laser
+      value: 
+      objectReference: {fileID: 1696392675254580524, guid: f0a52c84a65f5f84fa48a55e8898d467,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: fireHydrant
+      value: 
+      objectReference: {fileID: 4813372915017172783, guid: 6138e771ce3737644883da504aaa7fc7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0acbc2cde9bb40eca844f97f3e9f533, type: 3}
 --- !u!1001 &1073058948

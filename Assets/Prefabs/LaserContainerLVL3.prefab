@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6386823399540530673}
   - component: {fileID: 8174396429511972061}
   m_Layer: 0
-  m_Name: LaserContainerLVL2 1
+  m_Name: LaserContainerLVL3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 839f584b4b688b84da2f686212849647, type: 2}
+  - {fileID: 2100000, guid: 0284bc79440824b10a408c4989ee5088, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
