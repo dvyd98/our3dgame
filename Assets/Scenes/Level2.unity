@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -883,6 +883,24 @@ PrefabInstance:
       propertyPath: fireHydrant
       value: 
       objectReference: {fileID: 7768211690927038284, guid: 4b39aa0521c5e3c4cb6b76dbebb70e2a,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: magneticTileF
+      value: 
+      objectReference: {fileID: 9190711620139971756, guid: 49f46ce890d79594a8ecfb9fd00b6557,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: magneticTileL
+      value: 
+      objectReference: {fileID: 8796940413484167798, guid: 6af3caa3b3ba5e04fab7a2de0f5c9f6b,
+        type: 3}
+    - target: {fileID: 607122368371660022, guid: d0acbc2cde9bb40eca844f97f3e9f533,
+        type: 3}
+      propertyPath: magneticTileR
+      value: 
+      objectReference: {fileID: 7219767074799253312, guid: 128d37756de432147a1832144161bf61,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0acbc2cde9bb40eca844f97f3e9f533, type: 3}

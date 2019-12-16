@@ -48,6 +48,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!65 &7847358641853749047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233156861667196771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 34.000008, y: 2, z: 34.000008}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &6762739120419348342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,8 +203,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagneticTileForward
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4872747428787420642, guid: a45f0560f95baf8488b15ce1ccfefb6d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a45f0560f95baf8488b15ce1ccfefb6d, type: 3}
+--- !u!1 &7233156861667196771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4159996409235639815, guid: a45f0560f95baf8488b15ce1ccfefb6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6762739120587288932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7233156861667196775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4159996409235639811, guid: a45f0560f95baf8488b15ce1ccfefb6d,
