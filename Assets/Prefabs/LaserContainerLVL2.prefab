@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 2305307370598787830}
   - component: {fileID: 3904019322807067610}
   m_Layer: 0
-  m_Name: LaserContainer 1
+  m_Name: LaserContainerLVL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
